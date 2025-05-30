@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WhatsApp Apply</title>
   <style>
     body {
@@ -12,14 +13,13 @@
       margin: 0;
     }
 
-    /* 🔵 Image Background Wrapper */
     .banner-wrapper {
-      background-color: #0000FF; /*  blue */
+      background-color: #0000FF;
       padding: 20px 0;
     }
 
     .banner {
-      width: 100%;
+      width: 90%;
       max-width: 600px;
       margin: 0 auto;
       display: block;
@@ -28,13 +28,15 @@
     .info-box {
       background-color: #fff0f0;
       color: #333;
+      width: 90%;
       max-width: 600px;
-      margin: 10px auto 30px;
+      margin: 10px auto 20px;
       padding: 20px;
       border-left: 5px solid #e91e63;
       border-radius: 8px;
       font-size: 16px;
       line-height: 1.6;
+      box-sizing: border-box;
     }
 
     .container {
@@ -49,15 +51,20 @@
       border: none;
       border-radius: 8px;
       cursor: pointer;
+      width: 90%;
+      max-width: 300px;
     }
 
     .popup {
       display: none;
-      margin-top: 30px;
+      margin: 30px auto 0;
       background: #fff;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      width: 90%;
+      max-width: 400px;
+      box-sizing: border-box;
     }
 
     .option {
@@ -92,16 +99,20 @@
     <span style="color: grey;">Men do not settle wages</span>
   </div>
 
+  <!-- ✅ Your Image Added Below Info Box -->
+  <div style="margin-bottom: 30px;">
+    <img src="https://ldyafr.com/ydvxptsp/public/Group-49865-min.png" alt="Extra Info" style="max-width: 90%; height: auto; border-radius: 8px;">
+  </div>
+
   <div class="container">
     <h1>WhatsApp Apply</h1>
 
     <button class="button" onclick="showQuestion()">Apply via WhatsApp</button>
 
     <div class="popup" id="quizBox">
-      <h2>Q: Do you have a bank card to receive your daily salary ?</h2>
+      <h2>Q: Do you have a bank card to receive your daily salary?</h2>
       <div class="option" onclick="checkAnswer('Yes')">Yes</div>
       <div class="option" onclick="checkAnswer('No')">No</div>
-     
     </div>
   </div>
 
