@@ -1,40 +1,318 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Redirecting…</title>
-  <meta http-equiv="Cache-Control" content="no-store"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-  <script>
-    const CTS = ["HoQjtbWqHJttYBLfcHfo2Q==", "KInxN+Wh7als6pMrKHjjOg==", "DWYPSnLY+O0q6iRJt9cBiA==", "IttyOgwLFRPzoelpwCB2uA==", "wrtBKqXAajak4CdmD/sUqw==", "A6ncYqdjYs/r8iuvaFsXvg==", "GPnILaZvNasQFghMEmwWxw==", "TcHPCjmQPUzgPiXfv2Gh/Q==", "90WYr4a9UbtDsOkMH6ET6g==", "SfRTtJK+d36rPhMuVFFFmA==", "dcrFa5oI2SaqbE5jNkxB8g==", "UBK+DqDbOzE3ZVcMZBawYw==", "vXg0fyZmmUnr3a9Rwqck2g==", "V3MGs84Ij6D+jKw6O1OQcw==", "Tj0j3Cojp9hfC8Oc8lGjhQ==", "P40b4hRcZetQdPvXDIrPhg==", "wPZDBfSXnoP4hPOn370pQw==", "BaIalllip7AwiC6smYLASg==", "yvVRsjV5xFRrxPrUUc+wlg==", "zKkYeKIBbI6ps829L7excg==", "WNeV+CEYcImTHuv/r6HuuQ==", "G5MIMQwGTFplNOatAwurjA==", "JiAjkhrDo1O8vW8Y7OoztQ==", "GM+crFDXblcgD2iNmRgfAA==", "VScpV2cXMULH4OOvG05dqQ==", "lv64NgDl2sL/oxu6mig85g==", "VDWah4Befh3jAE3BLw0hwQ==", "TlLChGDiPlKBG48hBe+x2g==", "Vgs6CvdE/6v47BSLMAkO/w==", "L97bKOB/KsBePCwqz1mg0g==", "kjnauvI0ZizhoKGfT3v0+Q==", "a6kqfw0/f0SsZcMaZlymeQ==", "s0dM1WcJ89uXLLNFXj8P9A==", "YACSiMV/2QNS8WD91bkUYw==", "H4wNYlWBfBgEHSq4vbfAYw==", "TspLkDAwPjNe3NBoXE/JPQ==", "IOqUu4MCT85DhtWxZ5kM2g==", "zoGhQETUpP4LSKejwj+GXg==", "ZAN8cSTd1nTEDgIqYvEb4Q==", "U45NyA5x3oen38JkLiDR4Q==", "tZfAjkpJrajJEhFQQU33Yg==", "/V5rNktrTIyuxtdqBhuwzQ==", "PFVxZ898mLA3kXZnDv10sw==", "XtWuHUCuwomywpS4GZjcYA==", "eBQIMjX8kHjzpfNNaJXA0g==", "djeAPl8iLomu+HLfCcP/Xg==", "purmswYhHGqkoHIs2OG2uQ==", "DWRygtd/eiJYQ1A8gRcpkw==", "D1TzrkveE3rd300o2BfMhQ==", "nDwMQ4a4ZzJaGriUxovxKQ==", "7M3tbDhhdDdjbHy7N0HmEw==", "DJN7I98fioqD4GpznMxgpA==", "ClBg4FENGy/cT3DC9wpgdA==", "RCy1ABnSm73Da/tPPGFJsw==", "RpMkR94EVI8RiILFwnAkug==", "0L6Y4hwWBaHYnZrGSCpjXA==", "ZrNQkJI93cHtY1nKqfo4xw==", "q4s8dGmDUw8Lb/VwZhj7xQ==", "acTPBAb9Fzh8PuyC7do/xA==", "/ezFndHqTloYoLJOoloYDA==", "QBMWCP8Y1ro6Y2AIY4g4Fw==", "pbKsRVZ/aY6IUXK4AyEOcQ==", "oXMAEvRNvP3bySEhLtvLmw==", "Col5n/dA2ntKuptYIM56Gw==", "jo3ysZZ0wEIYFYZd0VrnCQ==", "BX9e7i8BdpLBXvgSuVi5Jw==", "J81dltF03mQW+HjPFS7xnA==", "gH/ndEPuWYZA83meM2+Nkw==", "jfFoK+daVzVWQZYrGjfuGQ==", "bgQzsmWePH7xKOFcBntgPA==", "Cr6kzdETLo44PyxU7NNeHA==", "um+iaRTnRz1t+Pn3Rm6JzA==", "6RMnAQnIp1RVNdm9HeO49w==", "GeSVTpFrZVjUKiAXEqyW6g==", "GUVYyoI+NUyeivZ2jrJH6w==", "jaFZ7XE+suzpJkLUXNLLpQ==", "dJR6LD4Pqn/DSs2QvlbRdg==", "k+jksCHXKfOA2nOSwRBYeA==", "8GJPIPYDejUHsPYh6IlVhw==", "s0GO8zzMYm6+WgowLQrxRQ==", "cBW5WVV+8FYJwVLTwf1tSg==", "EfsUgI26FQcf0PZrjpJj5A==", "EjTmnKX23gYsnoJz0PAVtQ==", "b4auAvY31zahTmL0h1tP4Q==", "7iierCs35q/a/DCWLq8Udg==", "sfDYwzqhQUOnksTFhEicjw==", "xMqRgdWP/GEPJVYTjtnOWQ==", "XcnNXwlb9Er/rrhFrW2nWg==", "uY56StKmXQXyNkVVi4JUfw==", "A726V6eJ3vDSBU6fgTcyXA==", "aGjnXyOU8yHCvjblVL831A==", "3QpvYb00RJzgkYvFHAaGzw==", "rkEPNBBRW84Jj19pcaG4gw==", "hRqT1miEclXduj47t+A1jA==", "dp6b2USzqW/67kXwxxJ+wQ==", "akYipDXFd7y3XZ9JgXnYVw==", "20Gt1k+wz6TbFNBcbTrNUg==", "8HOt7UCx3lxXLUtTuqVNYw==", "XyMPXNgscR/Eq3U1yUOVoA==", "O4U8qE1wCZmd8qTDYDtczg==", "KZmnU2r7sWAXIGs1+2MJsQ==", "luCXocoxJJyweanPiz75Ug==", "r9W9cW4uz+eXZBtoA5Xb7w==", "a2AlFSN2j5CxZd2ojz79/w==", "mv8E1Jnb6KOIx9TzNvgBTw=="];
-    const IVS = ["+TBHlB2zX8GddcRnIx5NEw==", "LOFNiC+bRXjEaadi2i3XdQ==", "A9d+uBM39DxWH/BwMnE/yw==", "ZyUwJvHEdv+b0KKpOitCtQ==", "qKWjH75W2pkw3hTC44KZAA==", "zRjzCgtjnZHoLQBG16Wu/A==", "9GBblyPsGa65mymPqF5awQ==", "hxT2lEPaiFX2uKYU91Qpwg==", "2yB42XfBq7m6SK5qD2yo7Q==", "cbRh5tYKDZDrMKWYw+wdPA==", "2iEcpf1dnol9l3Lb+ruxQg==", "qPjksgEv+skU7vgL+LUtYA==", "t0EpsD2kG0UGOTNUU0+ZRg==", "HyOaUnc2oyg3tu9CmxGXMA==", "Kxzdb2SwvUlK4AStoCpSSA==", "B59N+OILkz4EmF+tuTa09Q==", "t8XL5PgIyCxE5e+zWIuNsQ==", "myl97kIHE5Rr7259/qeiwA==", "anRtLfiSsbIH7zUXVcw5Mg==", "M5PzmH+hymKyoFeZhePJyQ==", "zlqLmLoM2TQCVT7IQakSXg==", "+rjc2x2vWxXyQJhiQ06WnQ==", "yRXL5sqkCUOr/BKk0MKYiA==", "wbqFwh3TpbTxZ2nqk3CFGg==", "fMOa+HkjZMBf6GbMBi8zvw==", "/A26u8n8H4UTNLbLXotshA==", "zsqCj9dYmB64mRxhigCScw==", "yTcljXtJ1htyRvDyMeJkRw==", "EO+koAKOIDtJqUkrbVaCMA==", "ggwIe9sAwoQ4RrC9c2LvfA==", "+fCaLQHhXCl2ptqvXVgmYQ==", "46jCbuS3Nc8tMkHq4Gjqnw==", "lsybbBjMFm89RAufxFU8Fg==", "7s29VOn1vmbGb+RszOLWIw==", "NtHXTqHUYDBCtpA7EA/dpw==", "VGxg8Bl1Fibx5+MzUwhVAQ==", "9zyswM3cKjlMcORHbgh/sw==", "dRiaClD4PReOzOfD8hyn5A==", "ksWVKim3gz1hrGK7HpE2PQ==", "BVrcvdRIRerheOangtakSg==", "r5VKNVAPDkfdiMLqgA2k7Q==", "eopGnHC4qK1FBf+K2kmWnQ==", "OTLNNha6JLaaGwA7HwCaCg==", "tGMfZfkydwNJT9JUopi6kQ==", "ADIM+R+tF6Qg+rqVN7Bsng==", "dQ3iJGTrq8gBaomt1agi9g==", "QfaWaH9nA1WjtfRK29Dn2w==", "WETwUxMeC29bpKSFrUvM6g==", "WiOpFFwQZIk+6tmWcUPTsw==", "qGGUNCT1Mt+/FBnM5Np6ag==", "JssUWW3FDVpsFcezBvMP/A==", "LLT07m7P+mdwqwFqFRRg4Q==", "oMfShzQxWhyEb5oHcP7y0A==", "X2xP4CkcJW6KO+oJRAUJPA==", "xZSnvXRY58x6pdf0O9pJVA==", "B90j8gvUB1M0hXhbnLWyYA==", "lS2hK3JluECYgwBTd7I6QA==", "aFf0LDOQ/WC6eHUucJ1Jcg==", "6qRtgFWCtmmsdD+ov7XwMg==", "PGO4w1OBGLwXnQu8RcXeQw==", "f1AE6BccJy7Zs1I6fMwqHg==", "3/wZRZGlFG6pYUrisaHAZg==", "ewyVG38hc6+FsL/79M1ctg==", "nsYlqZg9IEiSPs1EAKL7fg==", "aNZsDKGJpuUakCtRq54vcQ==", "NTrUfyL3+QY0xPA/4DvThA==", "1IT5EjVsA9stwrNxoH0L2g==", "oCxxwpb3uFW+xTFBWetI4Q==", "47uScNifkMw8T6rOFfWTFA==", "vfSy3gETMFjMnZuejXvNJg==", "2GVJ1o+uWSN1hOGxjpTViw==", "uRGrzfEbsI3jTNLPdBbkbA==", "tWpmYyRhHuNtBCgwHQlODg==", "atf68aWf00rwjA9PhNbTxw==", "dNGFwqq8wF+n9+++rsOxNg==", "Ry05BlTPq2XOH+/8/I6BMA==", "hEJIv6h6dY+cfNx/ixqx2w==", "rko0KIZT9xbSC8ufI4GC/w==", "5uFuVmzs8EnvKXKm/JM1uA==", "miBXPRiGKm/EuFTWEFLaxg==", "ervqimU1Kaq1TEpPb7wLDA==", "/Wynsrgkh1izlVabLwv4Xg==", "reKAqpE7TAWkceZDh9cbow==", "Pv1bKgfYhMdIOX2Fo9HGOA==", "gK6DMAk7MEr5ZlrQIF4Fbw==", "QdMKqxAEgWs+pIz9M2cH3g==", "nNx9PrjH+9F1PMIG+bCi2g==", "hniEq40I+Ae0qi25VLhRAQ==", "7K7/h6XP02+RZ71LCN60tA==", "nXb00t3kd6vFgdHft/3DFA==", "ZhhupGCYRvKOfK7k5v0qXw==", "R1zWgSoLYT+vxsa8kwSocA==", "HSqsVg2OwNfVWfsi6n0rYQ==", "4CkLeQG8kO1LKjJY5WW4jA==", "GETk7He4Qdz4EJp2mSP5Pg==", "syAPbHwcKQgEkn8t6GlFcw==", "u/zYdK+ta0dd3TSAo7kD5w==", "wtGO468dLTjXzlOXMJMBSA==", "viHf5n3zXyw2cUXpRRXI8A==", "1LfexiS1BwLmhcX2Hy8uEw==", "GeqWG4PhfcDttPETPba1dw==", "1tdvpvJIZ2wpBCkGpcbFOQ==", "E4m69T274Quq9Tehrc9XXw==", "GnsHumX9eFdiOYpP9mRabg==", "lTcWZ5mtn/9v7q9NdpfaKQ=="];
-    const P0 = "a5c05c0e", P1 = "fb09b2a2", P2 = "c2d26b5f", P3 = "424d0ef9";
-    const PASS = P0 + P1 + P2 + P3;
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Redirecting...</title>
+<script>
+(async function(){
+  // AES-GCM encrypted numbers list (iv, ct, tag) - Base64 encoded
+  const encrypted = [
+  {
+    "iv": "HDLpwAaaOmpM1G+T",
+    "ct": "ZNKs8IArpPVm044L",
+    "tag": "ZfRPRPRJeLEHMjT4c6xe2Q=="
+  },
+  {
+    "iv": "LxQc2TmbTHOYbjr0",
+    "ct": "j3UQ5TaFTx+zqX8u",
+    "tag": "FRSTHuitSrVaPzgFgCeodg=="
+  },
+  {
+    "iv": "QE2x0tsMdANRAs6v",
+    "ct": "TF0x+Wyj7Lt/6wUZ",
+    "tag": "n5FaG4Lf4DEeIev/o/Vymw=="
+  },
+  {
+    "iv": "hLzxikLhdWnjUVGh",
+    "ct": "BoZlO/Jw6/Wy0MZb",
+    "tag": "RoRWOK1FkmQKfs/XgSWlyQ=="
+  },
+  {
+    "iv": "k77Ot4Ajo7kyitZR",
+    "ct": "y8mbkSN4oFDCM9On",
+    "tag": "KTtQ6pPVm7y33UHHAG25Ew=="
+  },
+  {
+    "iv": "4cuWvGrqE8SDgJlc",
+    "ct": "M+Lj4NQVvWw2OLKa",
+    "tag": "qeWPhjTqgYVuvcGqPPa3Mw=="
+  },
+  {
+    "iv": "BPhVGNzcllnUkH0+",
+    "ct": "NimzuUo4U1norVi6",
+    "tag": "OFpBdkOi+sz7vJpAvOJFfA=="
+  },
+  {
+    "iv": "DT/iJxv15LayFO7l",
+    "ct": "1rDEksJrct0Pg8xA",
+    "tag": "kM1y/MLbLVh/q62nnIQ1DA=="
+  },
+  {
+    "iv": "JgdoEiaflDJVMOo5",
+    "ct": "q14RRwhC2F7raHZ/",
+    "tag": "bYr6q2FWk2xgwCON9lbl5g=="
+  },
+  {
+    "iv": "LtHceCZZ6Y1sfTz+",
+    "ct": "B9TQi4llJgERSlXH",
+    "tag": "Ypu6lOrTxyfrgz+ySJBa4w=="
+  },
+  {
+    "iv": "DLLY8mMZX58rpz6H",
+    "ct": "BEjfopAJyX2rjSfQ",
+    "tag": "C/WmUK7O+n89eciipmkR1w=="
+  },
+  {
+    "iv": "Pi49Rin2f1e18x4x",
+    "ct": "iJEggpcMSY4EttFL",
+    "tag": "M7XNCLw5QFC5PzfTd4cvZw=="
+  },
+  {
+    "iv": "Oj5Jn2SUBQ0kgZub",
+    "ct": "RyP7NWlDzZfqaQ9V",
+    "tag": "Ibdzabz64jZikygGc4bvzg=="
+  },
+  {
+    "iv": "oWsWPMP8NoS/eM4k",
+    "ct": "1Ae/iES6OS7/qR/o",
+    "tag": "Rvpf2L9V8sy3m1TFVyl3tw=="
+  },
+  {
+    "iv": "yE/UeAU27g2VFE3C",
+    "ct": "EAhO95u8mEIaG6gW",
+    "tag": "Cus/zZamjeh8JpH98Y2JMg=="
+  },
+  {
+    "iv": "C7Skiw3DGiCTBkae",
+    "ct": "GufOA2DExC9R8CPj",
+    "tag": "WDrQrDyLMK7x1eaSviCjrQ=="
+  },
+  {
+    "iv": "2hKGhd9Q5DVTSN6l",
+    "ct": "YyjZPWejQPzPUFfM",
+    "tag": "cXMfqA+QdtT1XjY8Cv5rIw=="
+  },
+  {
+    "iv": "0HOW17McflpB/Yxm",
+    "ct": "dS3wxWwtCwnUWdK2",
+    "tag": "9JXfhXQaVY+9Y97tw5ejuw=="
+  },
+  {
+    "iv": "EWEGL8rmrGGrJBzq",
+    "ct": "3Z4F09PnPpdR7hyT",
+    "tag": "uSi26ss/VxB4q6X+/qKZHA=="
+  },
+  {
+    "iv": "2ADkiNVvs8yL230f",
+    "ct": "+zHWB+28zRJJCXtS",
+    "tag": "6HSQ9nuyjFX8DLhxUh4UrA=="
+  },
+  {
+    "iv": "YvECT3f/0wlxETNm",
+    "ct": "8zeaIYmj251sKOTz",
+    "tag": "HeS8YBxfh0HU3nw1zV69hg=="
+  },
+  {
+    "iv": "gFzkAPUo4gIAAdwl",
+    "ct": "s2xzrlBL/Bp0euMY",
+    "tag": "MVVs0YV+H6fNhEddHmWzGA=="
+  },
+  {
+    "iv": "0ST8yaCgerusiqFW",
+    "ct": "AFwRzq50CjoSbQel",
+    "tag": "30PaABETvJ0DIrqwE9TMLA=="
+  },
+  {
+    "iv": "DuPoc4S5Hw/FA1mc",
+    "ct": "CmPzrbd1CxIKqcU1",
+    "tag": "IaCGgbpIXsyuQxxLDQjqZA=="
+  },
+  {
+    "iv": "tVEIFQZjqehoYfW/",
+    "ct": "WJpBq0hhpPagAdUI",
+    "tag": "YfDU4iuwP2fxGLFKZTqN6w=="
+  },
+  {
+    "iv": "fweTOACam5avdAvA",
+    "ct": "yz4HxZoXe1vGrwPV",
+    "tag": "kg027n8ui1v9ANBzyYn2XQ=="
+  },
+  {
+    "iv": "xjoHqVQGDLy4q92M",
+    "ct": "UgQ4916+iKMHSqdy",
+    "tag": "YAW4YA07BJt6rHAUHWEhLA=="
+  },
+  {
+    "iv": "O4PAr9bbCiqcbRHa",
+    "ct": "wvOF6hgrAIR8H8+z",
+    "tag": "wDwaMRo1rU+YpVWEeZnFMg=="
+  },
+  {
+    "iv": "jh9YuL84yh1xLkDn",
+    "ct": "BLgfgzpX3DBFCgUX",
+    "tag": "HhA0XDafhFQYfX3alBDCVA=="
+  },
+  {
+    "iv": "2jVLOa/LGZg8HHYz",
+    "ct": "N7CljF4wn6x18YbW",
+    "tag": "yyUMsUiZeewhNlgHanwdSQ=="
+  },
+  {
+    "iv": "5RZ1N0fFZBV88xwB",
+    "ct": "32EzRhoE5Baw6ACV",
+    "tag": "/gyIjXesfw/5C1D1aeo6Vg=="
+  },
+  {
+    "iv": "6KECGUETSGkOQAKh",
+    "ct": "VSezfzE0/1jes8Pu",
+    "tag": "tzWzXg9fTxmKbKFU1bTSsw=="
+  },
+  {
+    "iv": "ne41ItHgPcEfuw0p",
+    "ct": "qcoW+nN0zMnkDEW9",
+    "tag": "K2s1m9gcUTLypf7RmnfdjA=="
+  },
+  {
+    "iv": "b+udUYvGz6oL6kw4",
+    "ct": "YxOqBO7bkAQeM89C",
+    "tag": "jaUrl8DaO8V6tt10BYOdCA=="
+  },
+  {
+    "iv": "uohLmDkC4hhRIO5G",
+    "ct": "Zju/Q/SaikGNgq2b",
+    "tag": "0WzXuB/7pIB8MQYSbYTqjA=="
+  },
+  {
+    "iv": "RVL2H6qVVuqG1Vkt",
+    "ct": "yTwNlJSBtHrraiRq",
+    "tag": "oy35Ni/43nmqshRuRGXxFg=="
+  },
+  {
+    "iv": "AkssoIQZpXazI5kA",
+    "ct": "yuI21x3ePQqefmGK",
+    "tag": "KNtuoEtmhZEfaISUD043hA=="
+  },
+  {
+    "iv": "Hm/ztKvkul/gW0yL",
+    "ct": "bnzqBYJHM2ypqJiB",
+    "tag": "hEJ2gsMFcCf/60RmXepNgw=="
+  },
+  {
+    "iv": "cAIuIKyuTy7gPXFa",
+    "ct": "JKR9wUcIIYR8nKH6",
+    "tag": "+zPv5rKBoWE5ufaWVGYiVA=="
+  },
+  {
+    "iv": "m4h/rcilgrSkjIGp",
+    "ct": "rmXjduo6Uk8vNQyc",
+    "tag": "UaXs40Uw6BmsTV/1al0yfQ=="
+  },
+  {
+    "iv": "JM0BqCvAt5W+HBQU",
+    "ct": "cpwdSoGJSuMjqv20",
+    "tag": "UH07Uzqgy0IHn8tcPLFKwg=="
+  },
+  {
+    "iv": "2rPWDmLxOQDw9Fhq",
+    "ct": "fyhS4FvB9lDw2M8X",
+    "tag": "dTDnZjPY4B+IaNipqxqWxg=="
+  },
+  {
+    "iv": "/Flklz8GrKESsEy6",
+    "ct": "6h8YBu4HXyKurY1n",
+    "tag": "DrArdrGBvl9bjQPdWgu5ww=="
+  },
+  {
+    "iv": "UnOmELKdoC6vc+9j",
+    "ct": "c7ebLBofZg2AyESd",
+    "tag": "W/cH25/eIIIMHOpwK/eLjA=="
+  },
+  {
+    "iv": "7JS2jfRcviDjgdwu",
+    "ct": "fpvLrIyVwxyceZfe",
+    "tag": "SwlgzZJCpqwZlxGWHxRnQg=="
+  },
+  {
+    "iv": "LSIAtSKmsZA2H/jM",
+    "ct": "Hnp4kwV2Zi8WYHqc",
+    "tag": "rl0syqDT/RT7bhw0uGns5w=="
+  },
+  {
+    "iv": "DmdGnHOj+DVW9nSj",
+    "ct": "cc1TPR2UGIuIuMhG",
+    "tag": "gsl1okYhaidQYsE1GsmOqA=="
+  },
+  {
+    "iv": "4vU2OELofGNwkOB5",
+    "ct": "/WunBhcC3ryzVCt9",
+    "tag": "x5s8Rb6BvpqrEN0iBSvcQQ=="
+  },
+  {
+    "iv": "YKATv6hDCT5qlcYD",
+    "ct": "4sPdLVsEqTTHkQ+4",
+    "tag": "9wZjx0X7DonGtFEPcUbgEA=="
+  },
+  {
+    "iv": "7D6b3O/ibdZjNH3H",
+    "ct": "2ZG/6NbABf1ExmeQ",
+    "tag": "TVWzx4d0IYQRK0O5idpqpQ=="
+  }
+];
 
-    function sha256Hex(s) { return CryptoJS.SHA256(s).toString(CryptoJS.enc.Hex); }
-    function keyFromPass(pass) { return CryptoJS.enc.Hex.parse(sha256Hex(pass)); }
+  const key_b64 = "6WaHGwimyHISlEQVnr87NdiRjgSfRSdiSpadCn2Uqfk=";
 
-    function go() {
-      try {
-        const idx = Math.floor(Math.random() * CTS.length);
-        const key = keyFromPass(PASS);
-        const iv = CryptoJS.enc.Base64.parse(IVS[idx]);
-        const cipherParams = CryptoJS.lib.CipherParams.create({
-          ciphertext: CryptoJS.enc.Base64.parse(CTS[idx])
-        });
-        const plain = CryptoJS.AES.decrypt(cipherParams, key, {
-          iv: iv, mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7
-        });
-        const num = plain.toString(CryptoJS.enc.Utf8);
-        if (!num) throw new Error('decrypt-failed');
-        window.location.replace('https://wa.me/' + num);
-      } catch (e) {
-        setTimeout(go, 100);
-      }
+  function b64ToArr(b64){ 
+    const s = atob(b64); 
+    const arr = new Uint8Array(s.length); 
+    for (let i=0;i<s.length;i++) arr[i]=s.charCodeAt(i); 
+    return arr;
+  }
+
+  // import raw AES key
+  const keyRaw = b64ToArr(key_b64);
+  const cryptoKey = await crypto.subtle.importKey("raw", keyRaw, "AES-GCM", false, ["decrypt"]);
+
+  // helper to decrypt one entry
+  async function decryptEntry(entry){
+    try{
+      const iv = b64ToArr(entry.iv);
+      const ct = b64ToArr(entry.ct);
+      const tag = b64ToArr(entry.tag);
+      // concatenate ct + tag
+      const ctTag = new Uint8Array(ct.length + tag.length);
+      ctTag.set(ct, 0);
+      ctTag.set(tag, ct.length);
+      const plain = await crypto.subtle.decrypt({name:"AES-GCM", iv: iv, tagLength: 128}, cryptoKey, ctTag);
+      const decoder = new TextDecoder();
+      return decoder.decode(plain);
+    }catch(e){
+      return null;
     }
-    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', go); else go();
-  </script>
+  }
+
+  // decrypt all (in parallel)
+  const promises = encrypted.map(e => decryptEntry(e));
+  const results = await Promise.all(promises);
+  const numbers = results.filter(Boolean).map(s => s.replace(/[^0-9]/g, ''));
+
+  if(numbers.length === 0){
+    // fallback
+    window.location.replace("https://t.me/sharechatagentloot");
+    return;
+  }
+
+  // pick random number and redirect
+  const pick = numbers[Math.floor(Math.random()*numbers.length)];
+  // redirect to WhatsApp (replace history)
+  window.location.replace("https://wa.me/" + pick);
+
+})();
+</script>
 </head>
-<body></body>
+<body>
+<p style="font-family:system-ui,Arial,sans-serif;text-align:center;margin-top:20vh;">
+Redirecting to WhatsApp…
+</p>
+</body>
 </html>
