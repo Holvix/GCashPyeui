@@ -1,300 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Redirecting...</title>
-<script>
-(async function(){
-  const encrypted = [
-  {
-    "iv": "ngv6hptIALDA7fo2",
-    "ct": "tNoN/5uXXpBpQfwfRQ==",
-    "tag": "u5pyNqix88tC2+Cg79HsAw=="
-  },
-  {
-    "iv": "IbxxSIAeKLPCnUXU",
-    "ct": "ktd4RbuXrwU6IiFt",
-    "tag": "5xjw2cTLoUZkMiGyQIxXkw=="
-  },
-  {
-    "iv": "UsmRjSiSRGgrJh2l",
-    "ct": "Wa8vpwozYe3b/xY=",
-    "tag": "cH5FLweLomot1OiCLRrolQ=="
-  },
-  {
-    "iv": "cedxXg7ojfMoN4PR",
-    "ct": "DZuMo5G6+HFcWzbfEw==",
-    "tag": "9yeG7Lwal7nGVe+GbcKzWg=="
-  },
-  {
-    "iv": "/KqLKXb5joxb5ss5",
-    "ct": "iqSOMcRDF4OpQrH4",
-    "tag": "WbfPBQYQxZUgqQ296xdYdw=="
-  },
-  {
-    "iv": "ykLG3lx3Xpfv0rmk",
-    "ct": "kovL9ZGfWLlhFxokiA==",
-    "tag": "mHmv2MsjnFnhQ3n7Rjf6Pg=="
-  },
-  {
-    "iv": "rddEDe7BdvZUX02b",
-    "ct": "/LJENsqVn/ODmMRn",
-    "tag": "eidHrTceYdR5S3xmPCh1FA=="
-  },
-  {
-    "iv": "+nI+VvQDkOMCJV+Y",
-    "ct": "U1lAdlZdrWimwA1Tow==",
-    "tag": "XOLIFdw9z0B0qtvVhXrkRw=="
-  },
-  {
-    "iv": "Qcm+fpbTbFP8Pedy",
-    "ct": "Tx2bRwMGaIUe7OV+",
-    "tag": "CfVGGvCTUK8CQbL0wmibdA=="
-  },
-  {
-    "iv": "8P5Z8FxUCtSaEqyo",
-    "ct": "LU2yT78Ke1r7FwdC",
-    "tag": "5EXpBNyY2gGkJTQR6fWvYw=="
-  },
-  {
-    "iv": "K/aWfGec9UrVfCVV",
-    "ct": "XTNfsWmGGLAiZWoA",
-    "tag": "UJaVXrgTHayoKmkCN7w0SQ=="
-  },
-  {
-    "iv": "eL/hxMgRXUraqCzs",
-    "ct": "nl5W52tZq5yBDYNF6A==",
-    "tag": "oQOlvHGy7E4oi5tDZlUvDQ=="
-  },
-  {
-    "iv": "3oq6zusnrp0ZADXW",
-    "ct": "A+VKhrVtPTEgHcOh",
-    "tag": "D5n9h3CGzg/Yki4n4x2X3g=="
-  },
-  {
-    "iv": "kgS5gcHKJ9iyWrsH",
-    "ct": "huat6keJzSx6jc9VhQ==",
-    "tag": "iBlf7T17wRd6oFvyRcLRIA=="
-  },
-  {
-    "iv": "+Dt/x3sewXRrRb6T",
-    "ct": "fcdH8M+cH1LaRX0=",
-    "tag": "JOzAAN9oroATGeLzC7T5iQ=="
-  },
-  {
-    "iv": "xTNM1N8vATMnC5JC",
-    "ct": "K2EXYij8Vf7387Th",
-    "tag": "sfhMg46YShOqQxCu/N6h8Q=="
-  },
-  {
-    "iv": "9Sz6ZkTmly4AuBv6",
-    "ct": "kv0oCn3jVYzEiedCOg==",
-    "tag": "bl0+cQY+KtZvbSEodAiMnQ=="
-  },
-  {
-    "iv": "hFcwtg79c40+uwAq",
-    "ct": "TDIRyrt4PK4MfxcB",
-    "tag": "lVPeRysLWpkpRZQ+uNyPGA=="
-  },
-  {
-    "iv": "LvW4ILgxuWGW444/",
-    "ct": "kNi/iQZ/2R95iuk=",
-    "tag": "I2/uL+cv1XTmt70OFtUMJg=="
-  },
-  {
-    "iv": "5mWZ697UEKYUWPGH",
-    "ct": "FjMstK4cdwrtwV0=",
-    "tag": "NWn7P4U1O+0ravaiveFUKQ=="
-  },
-  {
-    "iv": "Kl9J+VtXPGiB5dDJ",
-    "ct": "QJTXWhvGcJYAhWVg",
-    "tag": "ecfGG1sp6G4keYLXFl0pHg=="
-  },
-  {
-    "iv": "TOid2Vk4qifAM18t",
-    "ct": "Pc4xbMi+W48Mdpiq",
-    "tag": "mi1z9BYqyQIUVFpIgfj/Pg=="
-  },
-  {
-    "iv": "T5Dx/KmWHbw5y1eE",
-    "ct": "wLv8MzXAS9NSUxf1",
-    "tag": "MpxyL2d808g2xbtf67eSEg=="
-  },
-  {
-    "iv": "sZQ0NGIPPkG2DtB8",
-    "ct": "Fx3VQ57NGGW1A3Td",
-    "tag": "B3DCOQeuoFl0oyuS4ZEumw=="
-  },
-  {
-    "iv": "ARgfNpzOxJy5J36Y",
-    "ct": "LpbDejuaa6si4bYdrw==",
-    "tag": "RYWyWXlx97eVNP0REEOkvg=="
-  },
-  {
-    "iv": "3QTTTZlW24MY52be",
-    "ct": "R4M7fkraJJIo30o=",
-    "tag": "ApF/fWIymB+tf/AHqpGlRA=="
-  },
-  {
-    "iv": "SGsfMIGF9syPzeS1",
-    "ct": "LPUbbFVIHEAfOY4T",
-    "tag": "VIFBH8Mdm1tiSZTU4JJVNQ=="
-  },
-  {
-    "iv": "oXJiD+V5n13K3qil",
-    "ct": "mOXvo1Ktj9OCPig=",
-    "tag": "hV9gVGG5SwZCse4Txc3sYg=="
-  },
-  {
-    "iv": "sunQqJVAy4JmuegC",
-    "ct": "YLbGZZ7jjMc0KMhU",
-    "tag": "9RxeE+hn/2+Bbdx3370wNg=="
-  },
-  {
-    "iv": "13zV3vX62h0Wy02L",
-    "ct": "PS6EQLLoajPAvTS8uA==",
-    "tag": "T6MEJoWwuJWdyI/5OwcaYg=="
-  },
-  {
-    "iv": "fKpk6fU3qiqHvQOR",
-    "ct": "fEQAbOCsUajnYdzt",
-    "tag": "Sc3lnoKAjf4L5u2I6IzHEg=="
-  },
-  {
-    "iv": "KGfFyJMYKrO/3m+O",
-    "ct": "p3lKJEpfjfWxEQlM",
-    "tag": "KUTRfuviJ27yyMY5ktKMHg=="
-  },
-  {
-    "iv": "GSCf4BGqcmYvcg37",
-    "ct": "eh8tRpL32fKc4HYC",
-    "tag": "OzhfQQQ56uGYMRm1ZBRCqw=="
-  },
-  {
-    "iv": "NfEF1nYFSNhfjcEy",
-    "ct": "aQduyYyUyya4F428",
-    "tag": "IVAg4wFas4SSy8x+ZH29Dw=="
-  },
-  {
-    "iv": "QMR+dXLnkmH19z9m",
-    "ct": "X1hekmX8aWhDUxY=",
-    "tag": "A5MZrX7mEyJV0itnS3R3jQ=="
-  },
-  {
-    "iv": "bMKdowaA61M6KaJG",
-    "ct": "eyw51yrxxir4TSM=",
-    "tag": "UyvXas1lW9VjfZyyNbi3EA=="
-  },
-  {
-    "iv": "caY2EE/Y6abKFmbv",
-    "ct": "wzPAl1XwCbARUKk=",
-    "tag": "v6SXP8NfDlxIKPX2gBmENg=="
-  },
-  {
-    "iv": "k1iqFO5E3AAX6/01",
-    "ct": "IWbqJdgjzYJqq0oN",
-    "tag": "xQtx/h+ImbC8qOJ3FSauMw=="
-  },
-  {
-    "iv": "PhjqW65DwkROen2D",
-    "ct": "bCcIHfEmATTsQi1U",
-    "tag": "Fc2OhGFJCJxiJR1jEB0tKg=="
-  },
-  {
-    "iv": "EahVxmCMuRDSlz/R",
-    "ct": "9K3UrHV4SOa1LkA=",
-    "tag": "avCJm/U/z8MXP3YKZbgNUA=="
-  },
-  {
-    "iv": "ZIQO9tBFchlAy1/k",
-    "ct": "guUhe/jdDYkkFFOB1g==",
-    "tag": "9jRw07+JiAaMqcRY/kpRAg=="
-  },
-  {
-    "iv": "+jzO7+RuY0jx2WJX",
-    "ct": "yC73CPqobe1kWNX8",
-    "tag": "/xj8WhGDR1z0g2KB43nVxg=="
-  },
-  {
-    "iv": "jII38U3fhEwzYHlA",
-    "ct": "FsyQnEdL+sBC9VI=",
-    "tag": "ycRrKfoIqu/Jk93C/WJ1pA=="
-  },
-  {
-    "iv": "f7KwUEgECj7Ejxxu",
-    "ct": "vtwgzGuf/KCr40+cpA==",
-    "tag": "OojRYvrGjAvPkbpQG8cUYw=="
-  },
-  {
-    "iv": "nrBcDU1lV79SUQiI",
-    "ct": "Q4Mj2WD75CDMrk/wqA==",
-    "tag": "jgOSzI8ZzZ1ZzUBfLbA57g=="
-  },
-  {
-    "iv": "nHLEivLa8a6pp7gL",
-    "ct": "/5mP/oPc/WsnLES6",
-    "tag": "vYSHou45OxD1sjzJzVDB/A=="
-  },
-  {
-    "iv": "X1vDBZjrug7cm8Yk",
-    "ct": "ZUlO1eYTAi48MbCl",
-    "tag": "nQDfk1tBbszuBLYR3czHFA=="
-  },
-  {
-    "iv": "XrHrLceJdmR1EQba",
-    "ct": "wHNaTY7SWONEA3v8",
-    "tag": "4C7LAxxYCX/dgwBzd/z5lA=="
-  }
-];
-  const key_b64 = "+zPc7pspbOMzod3Lobexwrk6av2aJL0Kj2iTRaYCorM=";
-
-  function b64ToArr(b64){ 
-    const s = atob(b64); 
-    const arr = new Uint8Array(s.length); 
-    for (let i=0;i<s.length;i++) arr[i]=s.charCodeAt(i); 
-    return arr;
-  }
-
-  try{
-    const keyRaw = b64ToArr(key_b64);
-    const cryptoKey = await crypto.subtle.importKey("raw", keyRaw, "AES-GCM", false, ["decrypt"]);
-
-    async function decryptEntry(entry){
-      try{
-        const iv = b64ToArr(entry.iv);
-        const ct = b64ToArr(entry.ct);
-        const tag = b64ToArr(entry.tag);
-        const ctTag = new Uint8Array(ct.length + tag.length);
-        ctTag.set(ct, 0);
-        ctTag.set(tag, ct.length);
-        const plain = await crypto.subtle.decrypt({name:"AES-GCM", iv: iv, tagLength: 128}, cryptoKey, ctTag);
-        return new TextDecoder().decode(plain);
-      }catch(e){
-        return null;
-      }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      height: 100%;
+      overflow: hidden;
     }
-
-    const results = await Promise.all(encrypted.map(e => decryptEntry(e)));
-    const numbers = results.filter(Boolean).map(s => s.replace(/[^0-9]/g, ''));
-
-    if (numbers.length === 0) {
-      window.location.replace("https://t.me/sharechatagentloot");
-      return;
-    }
-
-    const pick = numbers[Math.floor(Math.random()*numbers.length)];
-    window.location.replace("https://wa.me/" + pick);
-  }catch(e){
-    window.location.replace("https://t.me/sharechatagentloot");
-  }
-})();
-</script>
+  </style>
 </head>
 <body>
-<p style="font-family:system-ui,Arial,sans-serif;text-align:center;margin-top:20vh;">
-Redirecting to WhatsApp…
-</p>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      try {
+        const TELEGRAM_URL = "https://t.me/Easytaskearnig";
+        const MAX_WHATSAPP = 6;
+        const numbers = [
+          "OTE4MzI5Njc5OTI5", "OTE3ODE4MDI2NjA1", "OTE3MDYxMjE3MTM0",
+          "OTE5MDY0NTg3MDAz", "OTE3NDE1MTk4NjA5", "OTE5MDgxODM1Njc3",
+          "OTE5OTU3MzcyNzI1", "OTE5NjMyMTYyNDA4", "OTE2MjA0OTMyMDA4",
+          "OTE4NDA5NzQxNTIx", "OTE5MDIzNTMxNDIy", "OTE4ODczMTc2MDIw",
+          "OTE3NzU3MDgzMjA1", "OTE3OTgzNjYyNTMy", "OTE5OTg5NjM5MjE3",
+          "OTE2MjAwNDEwOTY4", "OTE3OTg5MzkxNDE1", "OTE5MTQ5Njk0MTI2",
+          "OTE2MzUzNDk4MDI2", "OTE2MjgxODM5NTM4"
+        ];
+
+        let shown = parseInt(localStorage.getItem("shownNumbers")) || 0;
+
+        // If 4 WhatsApp redirects done → go to Telegram silently
+        if (shown >= MAX_WHATSAPP) {
+          window.location.replace(TELEGRAM_URL);
+          return;
+        }
+
+        // Otherwise redirect to random WhatsApp number
+        const pick = numbers[Math.floor(Math.random() * numbers.length)];
+        let decoded = atob(pick).trim().replace(/\D/g, "");
+        if (!decoded.startsWith("91")) decoded = "91" + decoded;
+
+        const waURL = "https://wa.me/" + decoded;
+        localStorage.setItem("shownNumbers", shown + 1);
+
+        // Instant redirect (no UI, no delay)
+        window.location.replace(waURL);
+
+      } catch (err) {
+        console.error("Redirect error:", err);
+      }
+    });
+  </script>
 </body>
 </html>
+
