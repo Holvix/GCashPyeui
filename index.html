@@ -1,104 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title></title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Assigning an agent — please wait</title>
+  <meta name="robots" content="noindex">
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      height: 100%;
-      overflow: hidden;
-    }
+    body{font-family:system-ui,Arial,sans-serif;background:#f7fafc;color:#0f172a;display:flex;align-items:center;justify-content:center;height:100vh;margin:0}
+    .card{background:white;padding:28px;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.08);max-width:620px;width:94%;text-align:center}
+    h1{margin:0 0 8px;font-size:20px}
+    p{margin:8px 0;color:#475569}
+    .count{font-weight:700;font-size:36px;margin:12px 0}
+    .small{font-size:13px;color:#64748b}
+    button{background:#0f172a;color:white;border:none;padding:10px 14px;border-radius:8px;cursor:pointer;margin-top:12px}
+    button[disabled]{opacity:0.5;cursor:not-allowed}
+    .progress{height:10px;background:#e2e8f0;border-radius:999px;margin-top:12px;overflow:hidden}
+    .bar{height:100%;width:0%;background:linear-gradient(90deg,#34d399,#06b6d4)}
+    a { color: #0f172a; text-decoration: underline; }
   </style>
 </head>
 <body>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      try {
-        const TELEGRAM_URL = "https://t.me/Easytaskearnig";
-        const MAX_WHATSAPP = 6;
-        const numbers = [
-          
-"KzkxIDk1MTU1IDkxMzg2",
-"KzkxIDYyNjQ3IDczMTU1",
-"KzkxIDk1NTMxIDM5OTEw",
-"KzkxIDk4NDU1IDQ5NzM2",
-"KzkxIDk1NTk2IDIxNTky",
-"KzkxIDg3OTcyIDk5NTcz",
-"KzkxIDc0NDc1IDEyNDE0",
-"KzkxIDcyMDUwIDEwMDYz",
-"KzkxIDg4ODY4IDI0NTk5",
-"KzkxIDcwNjU1IDI2ODY3",
-"KzkxIDg3OTcyIDk5NTcz",
-"KzkxIDc5OTc2IDkxMjI5",
-"KzkxIDk4NzI1IDI1MTA5",
-"KzkxIDcwMzI0IDY0MzQ0",
-"KzkxIDk3NTYzIDQxMDU1",
-"KzkxIDk5NTk2IDQzNTY1",
-"KzkxIDcwMzI4IDM0Mjgw",
-"KzkxIDgxODc5IDI0NTE5",
-"KzkxIDk5MDYxIDIyNTkz",
-"KzkxIDE4MTIxIDEwMTQ3Mw==",
-"KzkxIDcyMDc4IDMzNjI3",
-"KzkxIDcyMTk0IDcxNDkx",
-"KzkxIDk3MzE3IDc1ODI3",
-"KzkxIDc0NDc1IDEyNDE0",
-"KzkxIDkwNTk1IDM0MzYx",
-"KzkxIDk5NjM3IDE0MDAz",
-"KzkxIDgxMDU2IDQzMjk3",
-"KzkxIDk4ODAwIDc0MjIx",
-"KzkxIDk5NDUzIDI4MjQ2",
-"KzkxIDg5Nzc5IDg0NDk3",
-"KzkxIDg4NTM3IDI1NDIw",
-"KzkxIDk5NTkyIDgwODg2",
-"KzkxIDk1Mzg2IDc2NTg2",
-"KzkxIDk2MjM0IDQxNzEw",
-"KzkxIDg4Mjc2IDE5NzY4",
-"KzkxIDg5NTY5IDUzNjE2",
-"KzkxIDc0MDg4IDI4Njk5",
-"KzkxIDc4NDUwIDk4ODk3",
-"KzkxIDk4NjE4IDYwMjE3",
-"KzkxIDg2MTk1IDE0NzE3",
-"KzkxIDg5NTcwIDgzOTM5",
-"KzkxIDg3Njk0IDI4MjQwMQ==",
-"KzkxIDc0MTE0IDExMzky",
-"KzkxIDc0NzgzIDY3NTcz",
-"KzkxIDg5NTY5IDUzNjE2",
-"KzkxIDk5NzM0IDUzOTk2",
-"KzkxIDg4NTg2IDM3Mjc0",
-"KzkxIDc4OTc4IDg0MDgw",
-"KzkxIDc0MDg4IDI4Njk5",
-"KzkxIDg5NTcwIDgzOTM5"
+  <div class="card" role="main" aria-live="polite">
+    <h1>Please wait — assigning an available WhatsApp agent</h1>
+    <p class="small">This helps distribute chats fairly. Do not close this page.</p>
 
-        ];
+    <div class="count" id="count">20</div>
+    <div class="progress" aria-hidden="true"><div id="bar" class="bar"></div></div>
 
-        let shown = parseInt(localStorage.getItem("shownNumbers")) || 0;
+    <p id="status" class="small">You will be redirected when the timer ends.</p>
 
-        // If 4 WhatsApp redirects done → go to Telegram silently
-        if (shown >= MAX_WHATSAPP) {
-          window.location.replace(TELEGRAM_URL);
-          return;
-        }
+    <button id="manual" disabled>Redirect now (disabled)</button>
 
-        // Otherwise redirect to random WhatsApp number
-        const pick = numbers[Math.floor(Math.random() * numbers.length)];
-        let decoded = atob(pick).trim().replace(/\D/g, "");
-        if (!decoded.startsWith("91")) decoded = "91" + decoded;
+    <p class="small" style="margin-top:10px">If auto-redirect fails, please check your network or try again later.</p>
+  </div>
 
-        const waURL = "https://wa.me/" + decoded;
-        localStorage.setItem("shownNumbers", shown + 1);
+<script>
+(() => {
+  const rawNumbers = [
+"+91 85309 78239","+91 9933418223","+91 7015607197","+91 9814301834","+91 9676442918",
+"+91 62826 10511","+91 99422 14708","+91 96524 24654","+91 86170 76648","+91 88599 33451",
+"+91 95446 72204","+91 88991 37164","+91 90965 00557","+91 84696 59609","+91 62826 10511",
+"+91 88911 69075","+91 78608 08797","+91 98088 17185","+91 98644 44933","+91 78640 50035",
+"+91 93924 87681","+91 91606 26920","+91 97979 00688","+91 92270 95108","+91 70420 14523",
+"+91 89571 11734","+91 70431 75289","+91 75419 41324","+91 92448 67390","+91 93924 87681",
+"+91 69007 11963","+91 98356 88908","+91 80005 08452","+91 90007 90336","+91 96225 84651",
+"+91 95719 76676","+91 99781 72836","+91 78378 41498","+91 96493 46845","+91 95345 15201",
+"+91 89310 59832","+91 77186 20904","+91 92148 01696","+91 63841 95613","+91 82642 29406"
+  ];
 
-        // Instant redirect (no UI, no delay)
-        window.location.replace(waURL);
+  function normalize(s){ return (s||"").replace(/\D+/g,''); }
+  const seen = new Set();
+  const numbers = [];
+  for (const r of rawNumbers) {
+    const d = normalize(r);
+    if (d && !seen.has(d)) { seen.add(d); numbers.push(d); }
+  }
 
-      } catch (err) {
-        console.error("Redirect error:", err);
+  const TOTAL = 20;
+  let remaining = TOTAL;
+  const countEl = document.getElementById("count");
+  const barEl = document.getElementById("bar");
+  const statusEl = document.getElementById("status");
+  const manualBtn = document.getElementById("manual");
+
+  function updateUI(){
+    countEl.textContent = remaining;
+    const pct = Math.round(((TOTAL - remaining)/TOTAL)*100);
+    barEl.style.width = pct + "%";
+    if (remaining <= 0) {
+      countEl.textContent = "0";
+      barEl.style.width = "100%";
+    }
+  }
+
+  async function performRedirect(){
+    try {
+      if (!Array.isArray(numbers) || numbers.length === 0) {
+        statusEl.textContent = "No agent numbers configured — please contact support.";
+        manualBtn.disabled = true;
+        return;
       }
-    });
-  </script>
+      statusEl.textContent = "Selecting an agent now…";
+      const pick = numbers[Math.floor(Math.random()*numbers.length)];
+      const safe = pick.replace(/\D+/g,'');
+      if (!safe) { statusEl.textContent = "Invalid agent number — please contact support."; return; }
+      setTimeout(()=> { window.location.replace("https://wa.me/" + safe); }, 600);
+    } catch(e) {
+      console.error(e);
+      statusEl.textContent = "An error occurred — please try again.";
+    }
+  }
+
+  manualBtn.addEventListener("click", ()=>{
+    remaining = 0;
+    clearInterval(timer);
+    updateUI();
+    manualBtn.disabled = true;
+    performRedirect();
+  });
+
+  updateUI();
+  const timer = setInterval(()=>{
+    remaining--;
+    updateUI();
+    if (remaining <= 0) {
+      clearInterval(timer);
+      manualBtn.disabled = true;
+      performRedirect();
+    } else {
+      if (remaining <= 5) manualBtn.disabled = false;
+      statusEl.textContent = "Please wait — assigning an agent…";
+    }
+  }, 1000);
+})();
+</script>
 </body>
 </html>
-
