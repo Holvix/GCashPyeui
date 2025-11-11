@@ -6,166 +6,132 @@
   <title>Assigning an agent — please wait</title>
   <meta name="robots" content="noindex">
   <style>
-    :root{
-      --bg1:#0b0f1a;
-      --bg2:#071226;
-      --accent1:#7c3aed;
-      --accent2:#06b6d4;
-      --muted:#98a2b3;
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: radial-gradient(circle at 20% 20%, #0f0c29, #302b63, #24243e);
+      background-image: url('https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1500&q=80');
+      background-size: cover;
+      background-position: center;
+      color: #e0f2fe;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
     }
-    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Arial,sans-serif;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:#e6eef8}
-    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px;box-sizing:border-box;position:relative;overflow:hidden}
-    /* futuristic city skyline */
-    .city{position:absolute;left:0;right:0;bottom:0;height:40vh;background:
-      radial-gradient(ellipse at 20% 80%, rgba(124,58,237,0.06) 0 2%, transparent 20%),
-      linear-gradient(0deg, rgba(0,0,0,0.2), transparent 40%);
-      display:flex;align-items:flex-end;justify-content:center;pointer-events:none;transform:translateY(10%);opacity:0.9;
+    .overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 0;
     }
-    .city svg{width:120%;height:100%}
-    /* card */
-    .card{position:relative;z-index:10;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));backdrop-filter: blur(6px);border-radius:16px;padding:28px;max-width:980px;width:100%;display:grid;grid-template-columns:360px 1fr;gap:20px;box-shadow:0 10px 40px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
-    .left{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px}
-    .right{padding:8px 4px;display:flex;flex-direction:column;justify-content:center}
-    h1{margin:0;color:#eaf2ff;font-size:20px;font-weight:600}
-    p.lead{color:var(--muted);margin:10px 0 20px}
-    .timer{font-size:48px;font-weight:700;letter-spacing:1px;margin:6px 0;color:linear-gradient(90deg,var(--accent1),var(--accent2));-webkit-background-clip:text;background-clip:text;background-image:linear-gradient(90deg,#f0abfc,#06b6d4);-webkit-text-fill-color:transparent}
-    .progress{height:12px;border-radius:999px;background:rgba(255,255,255,0.03);overflow:hidden;margin-top:12px;box-shadow:inset 0 -1px 0 rgba(0,0,0,0.5)}
-    .bar{height:100%;width:0%;background:linear-gradient(90deg,#7c3aed,#06b6d4);box-shadow:0 6px 18px rgba(6,182,212,0.08)}
-    .small{font-size:13px;color:var(--muted);margin-top:10px}
-    button.cta{margin-top:14px;background:linear-gradient(90deg,#7c3aed,#06b6d4);border:none;padding:10px 16px;border-radius:12px;color:white;font-weight:600;cursor:pointer;box-shadow:0 8px 30px rgba(7,18,28,0.6);}
-    button.cta[disabled]{opacity:0.5;cursor:not-allowed}
-    .fallback{margin-top:8px;color:var(--muted);font-size:13px}
-    /* anime character card (SVG container) */
-    .art{width:100%;max-width:340px;height:420px;border-radius:12px;display:flex;align-items:center;justify-content:center;position:relative;overflow:visible}
-    .art svg{width:100%;height:100%;display:block;filter:drop-shadow(0 30px 40px rgba(2,6,23,0.6))}
-    /* floating neon particles */
-    .particles{position:absolute;inset:0;z-index:2;pointer-events:none;mix-blend-mode:screen}
-    .credit{position:fixed;left:16px;bottom:18px;color:var(--muted);font-size:12px;z-index:50}
-    @media (max-width:880px){
-      .card{grid-template-columns:1fr;max-width:760px;padding:18px}
-      .art{height:320px;max-width:100%}
+    .card {
+      position: relative;
+      z-index: 1;
+      background: rgba(15, 23, 42, 0.85);
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+      max-width: 620px;
+      width: 94%;
+      text-align: center;
+      backdrop-filter: blur(8px);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      color: #7dd3fc;
+      text-shadow: 0 0 10px #0ea5e9;
+    }
+    p {
+      margin: 8px 0;
+      color: #bae6fd;
+    }
+    .count {
+      font-weight: 700;
+      font-size: 42px;
+      margin: 16px 0;
+      color: #f472b6;
+      text-shadow: 0 0 15px #f472b6;
+    }
+    .small {
+      font-size: 14px;
+      color: #a5b4fc;
+    }
+    button {
+      border: none;
+      padding: 12px 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 14px;
+      font-size: 15px;
+      transition: all 0.3s ease;
+    }
+    #manual {
+      background: linear-gradient(90deg, #06b6d4, #3b82f6);
+      color: white;
+      box-shadow: 0 0 15px #3b82f6;
+    }
+    #manual:hover {
+      box-shadow: 0 0 25px #60a5fa;
+      transform: scale(1.05);
+    }
+    #manual[disabled] {
+      opacity: 0.5;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+    #telegram {
+      background: linear-gradient(90deg, #ec4899, #8b5cf6);
+      color: white;
+      box-shadow: 0 0 15px #a855f7;
+      margin-left: 8px;
+    }
+    #telegram:hover {
+      box-shadow: 0 0 25px #d946ef;
+      transform: scale(1.05);
+    }
+    .progress {
+      height: 10px;
+      background: #1e293b;
+      border-radius: 999px;
+      margin-top: 12px;
+      overflow: hidden;
+    }
+    .bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg,#34d399,#06b6d4);
+      box-shadow: 0 0 20px #06b6d4;
     }
   </style>
 </head>
 <body>
-<div class="wrap" role="main" aria-live="polite">
-  <div class="particles" aria-hidden="true"></div>
-
-  <div class="card">
-    <div class="left">
-      <div class="art" aria-hidden="true">
-        <!-- Original stylized swordswoman SVG (non-copyright, original design) -->
-        <svg viewBox="0 0 360 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stylized swordswoman illustration">
-          <defs>
-            <linearGradient id="blade" x1="0" x2="1">
-              <stop offset="0" stop-color="#cfefff" stop-opacity="1"/>
-              <stop offset="1" stop-color="#06b6d4" stop-opacity="0.9"/>
-            </linearGradient>
-            <linearGradient id="hair" x1="0" x2="1">
-              <stop offset="0" stop-color="#2b2d42"/>
-              <stop offset="1" stop-color="#6f42c1"/>
-            </linearGradient>
-            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-              <feGaussianBlur stdDeviation="6" result="b"/>
-              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-            </filter>
-          </defs>
-
-          <!-- background neon shapes -->
-          <rect x="0" y="0" width="360" height="440" rx="12" fill="url(#bggrad)" opacity="0"/>
-          <g transform="translate(20,10)">
-            <ellipse cx="160" cy="360" rx="150" ry="30" fill="rgba(6,182,212,0.05)"/>
-            <!-- city hologram bars -->
-            <g opacity="0.25">
-              <rect x="10" y="280" width="18" height="80" rx="3" fill="#06202b"/>
-              <rect x="38" y="240" width="20" height="120" rx="3" fill="#071627"/>
-              <rect x="68" y="260" width="14" height="100" rx="3" fill="#051020"/>
-              <rect x="100" y="200" width="22" height="160" rx="3" fill="#081a28"/>
-              <rect x="140" y="230" width="18" height="130" rx="3" fill="#06202b"/>
-              <rect x="168" y="210" width="26" height="150" rx="3" fill="#071627"/>
-              <rect x="206" y="240" width="16" height="120" rx="3" fill="#051020"/>
-              <rect x="232" y="270" width="20" height="90" rx="3" fill="#081a28"/>
-            </g>
-
-            <!-- swordswoman silhouette with stylized gradients -->
-            <g transform="translate(40,10)">
-              <!-- cloak -->
-              <path d="M80 60 C120 20 220 20 240 80 C260 140 220 260 180 320 C150 370 100 390 60 360 C40 340 30 260 60 180 C72 140 60 100 80 60 Z" fill="url(#hair)" opacity="0.95" filter="url(#glow)"/>
-              <!-- hair front -->
-              <path d="M120 80 C110 90 110 130 120 150 C130 170 150 180 160 170 C172 158 170 120 160 100 C150 80 130 75 120 80 Z" fill="#0b1220" opacity="0.9"/>
-              <!-- face highlight -->
-              <ellipse cx="150" cy="120" rx="14" ry="18" fill="#ffd5e5" opacity="0.06"/>
-              <!-- armor plate -->
-              <path d="M140 170 C160 160 190 172 210 210 C200 220 180 230 150 238 C130 230 120 200 140 170 Z" fill="rgba(255,255,255,0.06)"/>
-              <!-- katana blade -->
-              <g transform="translate(190,40) rotate(18)">
-                <rect x="0" y="0" width="4" height="260" rx="2" fill="url(#blade)"/>
-                <rect x="-6" y="248" width="16" height="18" rx="3" fill="#222a35"/>
-                <circle cx="2" cy="248" r="6" fill="#ffd700" opacity="0.9"/>
-              </g>
-              <!-- glowing accents -->
-              <path d="M130 300 C150 290 160 260 180 220" stroke="#7c3aed" stroke-width="2" fill="none" opacity="0.7" stroke-linecap="round"/>
-              <path d="M90 250 C120 240 140 230 170 220" stroke="#06b6d4" stroke-width="1.6" fill="none" opacity="0.8" stroke-linecap="round"/>
-            </g>
-
-            <!-- subtle scanlines over art -->
-            <g opacity="0.04" fill="#ffffff">
-              <rect x="0" y="0" width="360" height="2"/>
-              <rect x="0" y="6" width="360" height="2"/>
-              <rect x="0" y="12" width="360" height="2"/>
-            </g>
-          </g>
-        </svg>
-      </div>
-      <div class="small" style="text-align:center">Original character — swordswoman · Futuristic samurai vibes</div>
-    </div>
-
-    <div class="right">
-      <h1>Assigning an agent — please wait</h1>
-      <p class="lead">Connecting you to an available WhatsApp agent. Do not close this page. The system will choose an agent randomly.</p>
-
-      <div class="timer" id="count">60</div>
-      <div class="progress" aria-hidden="true"><div id="bar" class="bar"></div></div>
-
-      <div class="small" id="status">You will be redirected when the timer ends.</div>
-
-      <button id="manual" class="cta" disabled>Redirect now (disabled)</button>
-      <div class="fallback">If auto-redirect fails, refresh or tap “Redirect now” when enabled.</div>
-    </div>
+  <div class="overlay"></div>
+  <div class="card" role="main" aria-live="polite">
+    <h1>Please wait — assigning an available WhatsApp agent</h1>
+    <p class="small">This helps distribute chats fairly. Do not close this page.</p>
+    <div class="count" id="count">60</div>
+    <div class="progress" aria-hidden="true"><div id="bar" class="bar"></div></div>
+    <p id="status" class="small">You will be redirected when the timer ends.</p>
+    <button id="manual" disabled>Redirect now (disabled)</button>
+    <button id="telegram">Contact on Telegram</button>
+    <p class="small" style="margin-top:10px">If auto-redirect fails, please check your network or try again later.</p>
   </div>
-
-  <!-- city silhouette -->
-  <div class="city" aria-hidden="true">
-    <svg viewBox="0 0 1200 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <g fill="rgba(255,255,255,0.02)">
-        <rect x="0" y="120" width="30" height="180" rx="4"/><rect x="40" y="80" width="40" height="220" rx="4"/>
-        <rect x="92" y="100" width="24" height="200" rx="4"/><rect x="130" y="40" width="60" height="260" rx="4"/>
-        <rect x="210" y="120" width="36" height="180" rx="4"/><rect x="270" y="60" width="54" height="240" rx="4"/>
-        <rect x="340" y="100" width="30" height="200" rx="4"/><rect x="400" y="30" width="90" height="270" rx="4"/>
-        <rect x="510" y="80" width="40" height="220" rx="4"/><rect x="580" y="120" width="24" height="180" rx="4"/>
-        <rect x="640" y="40" width="60" height="260" rx="4"/><rect x="760" y="100" width="30" height="200" rx="4"/>
-        <rect x="820" y="60" width="54" height="240" rx="4"/><rect x="920" y="30" width="90" height="270" rx="4"/>
-      </g>
-    </svg>
-  </div>
-</div>
-
-<script>
+  <script>
 (() => {
-  // Latest numbers provided by user (kept in same order, deduped in code)
   const rawNumbers = [
-"+91 78774 99244","+91 88090 03553","+91 88095 81346","+91 78967 74556","+91 91040 89020",
-"+91 83746 19221","+91 91040 89020","+91 93248 68655","+91 89358 99220","+91 97318 25815",
-"+91 88090 03553","+91 97975 80597","+91 99780 26795","+91 95766 91324","+91 96900 20121",
-"+91 85598 78509","+91 94286 67918","+91 96358 41974","+91 73185 62886","+91 78774 99244",
-"+91 90469 92327","+91 78387 45469","+91 70177 36003","+91 70843 77564","+91 96352 72409",
-"+91 70101 46469","+91 83746 19221","+91 83420 09787","+91 89358 99220","+91 95596 72447",
-"+91 83420 09787","+91 95267 43035","+91 98739 24961","+91 96353 79752","+91 90623 98385",
-"+91 76073 19885","+91 94700 21454","+91 84730 86930","+91 95596 72447","+91 80749 48227",
-"+91 70343 56735","+91 81229 59141","+91 80749 48227","+91 63530 52456","+91 80156 53344"
+"+91 80025 42032","+91 93607 41279","+91 91403 63058","+91 77430 24873","+91 91412 85096",
+"+91 94197 34660","+91 99726 74382","+91 81143 24929","+91 82644 43056","+91 72063 38310",
+"+91 91503 09718","+91 93510 55913","+91 83194 64201","+91 63795 67864","+91 62640 68712",
+"+91 83194 64201","+91 70011 49702","+91 75238 99036","+91 79836 70710","+91 97023 90824",
+"+91 97378 18806","+91 62009 46260","+91 73837 28403","+91 91412 85096","+91 82644 43056",
+"+91 97178 47586","+91 80756 41101","+91 93433 42325","+91 81940 49690","+91 95741 62580",
+"+91 92115 81790","+91 91116 99517","+91 73208 74304","+91 91229 07390","+91 97305 15983",
+"+91 93433 42325","+91 80756 41101","+91 91229 07390","+91 80540 39012","+91 76438 37805"
   ];
-
-  function normalize(s){ return (s||'').replace(/\D+/g,''); }
+  function normalize(s){ return (s||"").replace(/\D+/g,''); }
   const seen = new Set();
   const numbers = [];
   for (const r of rawNumbers) {
@@ -173,81 +139,53 @@
     if (d && !seen.has(d)) { seen.add(d); numbers.push(d); }
   }
 
-  // UI refs & timer
-  const TOTAL = 6;
+  const TOTAL = 60;
   let remaining = TOTAL;
-  const countEl = document.getElementById('count');
-  const barEl = document.getElementById('bar');
-  const statusEl = document.getElementById('status');
-  const manualBtn = document.getElementById('manual');
+  const countEl = document.getElementById("count");
+  const barEl = document.getElementById("bar");
+  const statusEl = document.getElementById("status");
+  const manualBtn = document.getElementById("manual");
+  const telegramBtn = document.getElementById("telegram");
+
+  telegramBtn.addEventListener("click", () => {
+    window.open("https://t.me/+11e7ty9wVM84YzI1", "_blank");
+  });
 
   function updateUI(){
     countEl.textContent = remaining;
     const pct = Math.round(((TOTAL - remaining)/TOTAL)*100);
-    barEl.style.width = pct + '%';
+    barEl.style.width = pct + "%";
     if (remaining <= 0) {
-      countEl.textContent = '0';
-      barEl.style.width = '100%';
+      countEl.textContent = "0";
+      barEl.style.width = "100%";
     }
   }
 
   async function performRedirect(){
     try {
       if (!Array.isArray(numbers) || numbers.length === 0) {
-        statusEl.textContent = 'No agent numbers configured — please contact support.';
+        statusEl.textContent = "No agent numbers configured — please contact support.";
         manualBtn.disabled = true;
         return;
       }
-      statusEl.textContent = 'Selecting an agent now…';
+      statusEl.textContent = "Selecting an agent now…";
       const pick = numbers[Math.floor(Math.random()*numbers.length)];
       const safe = pick.replace(/\D+/g,'');
-      if (!safe) { statusEl.textContent = 'Invalid agent number — please contact support.'; return; }
-      // small delay so user observes the final state
-      setTimeout(()=> { window.location.replace('https://wa.me/' + safe); }, 600);
+      if (!safe) { statusEl.textContent = "Invalid agent number — please contact support."; return; }
+      setTimeout(()=> { window.location.replace("https://wa.me/" + safe); }, 600);
     } catch(e) {
       console.error(e);
-      statusEl.textContent = 'An error occurred — please try again.';
+      statusEl.textContent = "An error occurred — please try again.";
     }
   }
 
-  manualBtn.addEventListener('click', ()=>{
+  manualBtn.addEventListener("click", ()=>{
     remaining = 0;
     clearInterval(timer);
     updateUI();
     manualBtn.disabled = true;
     performRedirect();
   });
-
-  // particles animation (simple canvas)
-  (function makeParticles(){
-    const container = document.querySelector('.particles');
-    const w = container.clientWidth, h = container.clientHeight;
-    const particleCount = 28;
-    for (let i=0;i<particleCount;i++){
-      const el = document.createElement('div');
-      const size = (Math.random()*6)+4;
-      Object.assign(el.style, {
-        position:'absolute',
-        left: (Math.random()*100)+'%',
-        top: (Math.random()*100)+'%',
-        width: size+'px',
-        height: size+'px',
-        borderRadius:'50%',
-        background: 'radial-gradient(circle at 30% 30%, rgba(124,58,237,0.9), rgba(6,182,212,0.6))',
-        filter: 'blur(8px)',
-        opacity: Math.random()*0.6+0.2,
-        transform: 'translate3d(0,0,0)'
-      });
-      container.appendChild(el);
-      (function anim(node, idx){
-        const dur = 6000 + Math.random()*8000;
-        node.animate([
-          { transform: 'translateY(0px) scale(1)', opacity: node.style.opacity },
-          { transform: 'translateY(-80px) scale(1.6)', opacity: 0 }
-        ], { duration: dur, iterations: Infinity, delay: idx*120 });
-      })(el,i);
-    }
-  })();
 
   updateUI();
   const timer = setInterval(()=>{
@@ -259,10 +197,10 @@
       performRedirect();
     } else {
       if (remaining <= 5) manualBtn.disabled = false;
-      statusEl.textContent = 'Please wait — assigning an agent…';
+      statusEl.textContent = "Please wait — assigning an agent…";
     }
   }, 1000);
 })();
-</script>
+  </script>
 </body>
 </html>
