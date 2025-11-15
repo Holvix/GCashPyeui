@@ -3,16 +3,20 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Easy-Earning</title>
+<title>Assigning an agent — please wait</title>
 <meta name="robots" content="noindex">
 <style>
-body{font-family:system-ui,Arial,sans-serif;background:radial-gradient(circle at 20% 20%, #0f0c29, #302b63, #24243e);background-image:url('https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1500&q=80');background-size:cover;background-position:center;color:#e0f2fe;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;overflow:hidden}
+body{font-family:system-ui,Arial,sans-serif;background:radial-gradient(circle at 20% 20%, #0f0c29, #302b63, #24243e);
+background-image:url('https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1500&q=80');
+background-size:cover;background-position:center;color:#e0f2fe;
+display:flex;align-items:center;justify-content:center;height:100vh;margin:0;overflow:hidden}
 .overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.6);z-index:0}
-.card{position:relative;z-index:1;background:rgba(15,23,42,0.85);padding:32px;border-radius:16px;box-shadow:0 0 40px rgba(0,255,255,0.3);max-width:620px;width:94%;text-align:center;backdrop-filter:blur(8px)}
+.card{position:relative;z-index:1;background:rgba(15,23,42,0.85);padding:32px;border-radius:16px;
+box-shadow:0 0 40px rgba(0,255,255,0.3);max-width:620px;width:94%;text-align:center;backdrop-filter:blur(8px)}
 h1{margin:0 0 8px;font-size:22px;color:#7dd3fc;text-shadow:0 0 10px #0ea5e9}
 .count{font-weight:700;font-size:42px;margin:16px 0;color:#f472b6;text-shadow:0 0 15px #f472b6}
 .small{font-size:14px;color:#a5b4fc}
-button{border:none;padding:12px 18px;border-radius:10px;cursor:pointer;margin-top:14px;font-size:15px;transition:all .3s ease}
+button{border:none;padding:12px 18px;border-radius:10px;cursor:pointer;margin-top:14px;font-size:15px;transition:.3s ease}
 #manual{background:linear-gradient(90deg,#06b6d4,#3b82f6);color:white;box-shadow:0 0 15px #3b82f6}
 #manual[disabled]{opacity:.5;cursor:not-allowed;box-shadow:none}
 #telegram{background:linear-gradient(90deg,#ec4899,#8b5cf6);color:white;box-shadow:0 0 15px #a855f7;margin-left:8px}
@@ -32,80 +36,69 @@ button{border:none;padding:12px 18px;border-radius:10px;cursor:pointer;margin-to
   <button id="telegram">Contact on Telegram</button>
   <p class="small" style="margin-top:10px">If auto-redirect fails, please check your network or try again later.</p>
 </div>
+
 <script>
-const ENCRYPTED_BLOBS = ["YMdCuKL2PZxoDy3JWfZ7ipPOCa9QOB3x", "6yow5YF5V6RP3DYQ0hsI0rRJbpx77gUl", "FcThid5ynJFmNSG8LPXZuOpCr6dTBRGJ", "6xDW9OUj0LywSOXC0iHvwtEQ44uIcNb1", "h2XZZ1yH5ZhDqwYpvlTuV2u/0ql1kjQf", "LI8jWboepkfOETT6Fb4aYIMpk3b7KQTO", "PQVYnZPxRaf6Mx2ZBDRvraHIdJLMCymr", "4Zn2StaS2YULaS8L2KjOeeKr4LI8Xh86", "NE+OARKW3XpYQBfzDX62MCam7kxtcCfG", "bnWuAtI2xplVC6YNV0SZMeoO9a1gMpY6", "OB5dNwmod8tdDtiOAS9kBDqcTvluPum+", "+/3rbfINEZo1/W1fwszSX8U/JqwNz1xv", "SxDYvcBGVNtPTgtWciHhj/JwYex4eDth", "+8P+4Se3sNovwj0vwvLJ1RePiO4Z9QQc", "qJL9rfnPs7B4qPkqkaPEns39h4dOkMkS", "OdQ2fzzfAyNdgV7nAOUBSgXoNxVotG3T", "RVK4Yhm7hgay0KsdfGOAUy2LtTCH4Jso", "soJvEursO4lR6W+Ri7NWIdnYArti2V6h", "uNbnwBUZQ1Qx6ZPzgefe8iIrdGIJ26LD", "PIII/Ha0y/yuSvfoBbM/xEOE+8mWcsTb", "aMkzZEgo6eSxtjM0UfgKUnwZ2tKGhgIM", "NUcJMvtzWM2POmTXDHY+B8JEbPu6D1fj", "fsm+jvntU3u8susIR/iGvsnVYUuLgNo5", "3AV9sqHS1dU0dW6E5TRFgZXr7OIDQl61", "18YBi6LeI3qxF1St7vc4vZvtFk2AJWWd", "EbwrzgY2KpRj+qEWKI0S/DYEG6JayJMu", "ePB25B8nx89VfWNdQcFP0iYU8vhkT1Jt", "DGQ0+q3oWwW/yoDoNVUNzJneaz2G/LTa", "LmPAN6sDetcQQqCMF1L5DpkxT+IhdpC/", "frOO5PgP8Uc35vnWR4K30sw+wnEA1sju", "3Lx0Y/t38VUPzJbW5Y1DVMpOxGc3+qfh", "e2vvwbgj46TNMsC9QlrW8osX2pb+AvGN", "PxntIv4jqNzGmqGpBijaFs4bkOjwrZia", "qCuqfqvKIrKI8pVpkRqST5/6EYS9wqVc", "LmE1pnBE47NXcmgAF1ACn0B20oVgQlkz", "7lsmhernSS2iUsiS12oRvNLXex+aY/um", "7NfWy02gZIqo4BCu1ebv/XmWVLKR1iSc", "fM6W9s27z2pKF4HfRf+vz/SM+lt/L7Hr", "tPw3WkE0OO+MmZDjjc0ObHgHDdi9q6HT", "oGdXqvg6csncyR05mVZgksoLQvrp8C4B", "qo8PwI+YmtcK2+KBk74287uqruA849K5", "dhM13FYGtiiwXw3NTyIC62c/gxqIaTz6", "hEMRM6etxVv5OLZIvXImB5eV/W/PD497", "8fD+oYuFveG1h6VOyMHHkbm0hdaFtJd+", "I1Ui1gGsAG75f4UYGmQV7jOdMF3MRrYg"];
+const ENCRYPTED = ["FOEh7V+KPMRv3WlRLdAZ3me7BfRX5V9k", "6dQgAW7/RE7/56Wq0OUZMF3OfHrN3pyf", "DJLYmDqG9kuJJxKMNaPhrgy1xH24FCe7", "7BoOcQYGWwGwsiGt1Ss5RTM/aziIixGc", "j0IUFqnN52WfIY2UtnMjJJH63l2sFb2k", "cC3B5wDPu4pd0csOSRz20zP6g7lo4fk/", "U2q9/mN1lIujdklGaluKzlpAo76bQHxw", "GWPu5IPGzvoiPsZiIFLX3Lfz+84bCfVU", "+JzLnzKmMz20QCrNwa38rAeSCgqCdBv7", "AJh/0PmNAKho4QodOalI4820NJxf1z4q", "JtwDnBaVV5Phk5KDH+00qCOsZ6rZqqKy", "UDlrdJlAu3Ej2YWNaQhSRapxg0UR4Ly4", "IwLa/iXSQihfDoCHGjPjyBPhcB5uPbWw", "QoLzsaAUucRp2heze7PKhpMljvNc4iWE", "YewTd+Gx8oFoSo1DWN0kR9iExbRQfLh1", "9BOqYgVg6lMuvuvgzSKSVzVZ3WcbjtzW", "+vPmO2PBwoa8NQdSw8LfClf3976NDTBi", "xHa718clDoB/esNj/UeC5/UTPblOT/tT", "UEw0j2jU+j3kKKXAaX0Du1vkww/UH5Xw", "jumA21u+0fDbibmFt9i44mOM48LvuIqx", "Gl4nFi5SghxXGyDSI28RJBhiuilhKhHr", "aABHoSoI6OJF9SsIUTF+kh062dpwxh46", "4SyhvCbH/N8zMWjt2B2ZjBP3y+8DBljZ", "tORmGIHVTODducMwjdVfIbPjedbujPcB", "yDr7VYFJyttEgtd/8QvCY7V7+utwseVL", "m+vO3eXwFCcIRawpotr37NPELRA8fJke", "ERAbe5qT1Adp4+1MKCEiTKKj5TFc2954", "envnw2888mT4VfH0Q0re+1sFxVXAY8XD", "daGe0nBi6VgvcfGKTJCn60Ra0GoZSMC/", "NzMBrFDUeP65pQXaDgI5mmLhQM6AlDfq", "zOpuzZVuQ8JwiFNr9dtX9aZXdPpBuWVT", "A28JYpUTwL/zsJ8QOl4wW6cl9YnAhash", "gh9wJ3wMqM1mkkzcuy5HEEg9kfxXp3zt", "9iltt6JbmulpgJKMzxhVhJVpo99buaO0", "/ZK4Eo7/BJ14NK6RxKOOIbbMPK5KA5yo", "gFsZG9mGI7slEPKwuWouLO23GooUJcKB", "XDrfueL+LJrbGrruZQvngNDGHKjqLYLZ", "DXUwLSGvAR+V3jf8NEQJGhmYNyas7QHO", "58c47sjEwPVygCTA3vYB3f/29cNDtxf0", "19Ib2opAA3MijgBN7uMt6bJzO0AQuTJ0", "eBnuZ1maOTbBOLZnQSjWVmurCg71CIRW", "F6OhTjRwD5M30Ak3LpKZdg1JP6UH5T8D", "Ogg6vKNmm5BHbyhpAzkNjJVSrql2WBpf", "HoPz1IKYt1hoKn9SJ7LL7LergmtQHkZg", "QshWri6N4uBMOFU7e/lvlxa10NB1DGEO", "xVEtAnQYGcJ3ZUq6/GAVOkUvKvVGUHuN", "/ky+CPBpxUMcUDbCx32JOsBQ83AvZgH7", "g5rlcTOf9EiCIqw3uqvTQgSuxHq6FJkD"];
 
-function b64ToUint8Array(b64){ const bin = atob(b64); const len = bin.length; const arr = new Uint8Array(len); for(let i=0;i<len;i++) arr[i]=bin.charCodeAt(i); return arr; }
+function b64ToBytes(b64) {
+  let bin = atob(b64);
+  let arr = [];
+  for (let i = 0; i < bin.length; i++) arr.push(bin.charCodeAt(i));
+  return new Uint8Array(arr);
+}
 
-function decryptXor(blobB64){
-  const raw = b64ToUint8Array(blobB64);
-  const half = Math.floor(raw.length/2);
-  const ks = raw.slice(0, half);
-  const ct = raw.slice(half);
-  const pt = new Uint8Array(ct.length);
-  for(let i=0;i<ct.length;i++) pt[i]=ct[i]^ks[i];
-  return new TextDecoder().decode(pt);
+function decrypt(blob) {
+  let raw = b64ToBytes(blob);
+  let half = Math.floor(raw.length / 2);
+  let ks = raw.slice(0, half);
+  let ct = raw.slice(half);
+  let out = [];
+  for (let i = 0; i < ct.length; i++) out.push(ct[i] ^ ks[i]);
+  return new TextDecoder().decode(new Uint8Array(out));
 }
 
 (function(){
-  const rawNums = ENCRYPTED_BLOBS.map(b=>decryptXor(b));
-  const seen = new Set();
-  const numbers = [];
-  for(const r of rawNums){
-    const d = (r||'').replace(/\D+/g,'');
-    if(d && !seen.has(d)){ seen.add(d); numbers.push(d); }
-  }
+  const rawNums = ENCRYPTED.map(e => decrypt(e));
+  const numbers = rawNums.map(n => n.replace(/\D+/g, ''));
 
-  const TOTAL = 5;
-  let remaining = TOTAL;
-  const countEl = document.getElementById('count');
-  const barEl = document.getElementById('bar');
-  const statusEl = document.getElementById('status');
-  const manualBtn = document.getElementById('manual');
-  const telegramBtn = document.getElementById('telegram');
+  let TOTAL = 6;
+  let remaining = 6;
 
-  telegramBtn.addEventListener('click', ()=>{ window.open('https://t.me/Easytaskearnig'); });
+  const countEl = document.getElementById("count");
+  const barEl = document.getElementById("bar");
+  const statusEl = document.getElementById("status");
+  const manualBtn = document.getElementById("manual");
+  const telegramBtn = document.getElementById("telegram");
 
-  function updateUI(){
+  telegramBtn.onclick = () => window.open("https://t.me/Easytaskearnig", "_blank");
+
+  function update() {
     countEl.textContent = remaining;
-    const pct = Math.round(((TOTAL - remaining)/TOTAL)*100);
-    barEl.style.width = pct+'%';
-    if(remaining<=0){ countEl.textContent='0'; barEl.style.width='100%'; }
+    barEl.style.width = ((TOTAL-remaining)/TOTAL*100) + "%";
   }
 
-  async function performRedirect(){
-    try{
-      if(!Array.isArray(numbers) || numbers.length===0){
-        statusEl.textContent='No agent numbers configured — please contact support.';
-        manualBtn.disabled = true;
-        return;
-      }
-      statusEl.textContent = 'Selecting an agent now…';
-      const pick = numbers[Math.floor(Math.random()*numbers.length)];
-      const safe = pick.replace(/\D+/g,'');
-      if(!safe){ statusEl.textContent='Invalid agent number — please contact support.'; return; }
-      setTimeout(()=>{ window.location.replace('https://wa.me/'+safe); }, 600);
-    }catch(e){ console.error(e); statusEl.textContent='An error occurred — please try again.'; }
+  function redirect() {
+    let pick = numbers[Math.floor(Math.random() * numbers.length)];
+    window.location.replace("https://wa.me/" + pick);
   }
 
-  manualBtn.addEventListener('click', ()=>{
+  manualBtn.onclick = () => {
     remaining = 0;
-    clearInterval(timer);
-    updateUI();
-    manualBtn.disabled = true;
-    performRedirect();
-  });
+    update();
+    redirect();
+  };
 
-  updateUI();
-  const timer = setInterval(()=>{
+  update();
+
+  let timer = setInterval(() => {
     remaining--;
-    updateUI();
-    if(remaining<=0){ clearInterval(timer); manualBtn.disabled = true; performRedirect(); } else {
-      if(remaining<=5) manualBtn.disabled = false;
-      statusEl.textContent = 'Please wait — assigning an agent…';
+    update();
+    if (remaining <= 0) {
+      clearInterval(timer);
+      redirect();
     }
-  },1000);
-
+    if (remaining <= 5) manualBtn.disabled = false;
+  }, 1000);
 })();
 </script>
 </body>
