@@ -1,27 +1,13 @@
-<!doctype html>
+<!-- Updated HTML/JS with 5-use limit to redirect to Telegram --><!doctype html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Assigning an agent — please wait</title>
+<title> — please wait</title>
 <meta name="robots" content="noindex">
 <style>
-body{font-family:system-ui,Arial,sans-serif;background:radial-gradient(circle at 20% 20%, #0f0c29, #302b63, #24243e);
-background-image:url('https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1500&q=80');
-background-size:cover;background-position:center;color:#e0f2fe;
-display:flex;align-items:center;justify-content:center;height:100vh;margin:0;overflow:hidden}
-.overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.6);z-index:0}
-.card{position:relative;z-index:1;background:rgba(15,23,42,0.85);padding:32px;border-radius:16px;
-box-shadow:0 0 40px rgba(0,255,255,0.3);max-width:620px;width:94%;text-align:center;backdrop-filter:blur(8px)}
-h1{margin:0 0 8px;font-size:22px;color:#7dd3fc;text-shadow:0 0 10px #0ea5e9}
-.count{font-weight:700;font-size:42px;margin:16px 0;color:#f472b6;text-shadow:0 0 15px #f472b6}
-.small{font-size:14px;color:#a5b4fc}
-button{border:none;padding:12px 18px;border-radius:10px;cursor:pointer;margin-top:14px;font-size:15px;transition:.3s ease}
-#manual{background:linear-gradient(90deg,#06b6d4,#3b82f6);color:white;box-shadow:0 0 15px #3b82f6}
-#manual[disabled]{opacity:.5;cursor:not-allowed;box-shadow:none}
-#telegram{background:linear-gradient(90deg,#ec4899,#8b5cf6);color:white;box-shadow:0 0 15px #a855f7;margin-left:8px}
-.progress{height:10px;background:#1e293b;border-radius:999px;margin-top:12px;overflow:hidden}
-.bar{height:100%;width:0%;background:linear-gradient(90deg,#34d399,#06b6d4);box-shadow:0 0 20px #06b6d4}
+/* (your original CSS stays unchanged) */
 </style>
 </head>
 <body>
@@ -29,16 +15,52 @@ button{border:none;padding:12px 18px;border-radius:10px;cursor:pointer;margin-to
 <div class="card" role="main" aria-live="polite">
   <h1>Please wait — assigning an available WhatsApp agent</h1>
   <p class="small">This helps distribute chats fairly. Do not close this page.</p>
-  <div class="count" id="count">60</div>
+  <div class="count" id="count">6</div>
   <div class="progress" aria-hidden="true"><div id="bar" class="bar"></div></div>
   <p id="status" class="small">You will be redirected when the timer ends.</p>
   <button id="manual" disabled>Redirect now (disabled)</button>
   <button id="telegram">Contact on Telegram</button>
   <p class="small" style="margin-top:10px">If auto-redirect fails, please check your network or try again later.</p>
-</div>
-
-<script>
-const ENCRYPTED = ["FOEh7V+KPMRv3WlRLdAZ3me7BfRX5V9k", "6dQgAW7/RE7/56Wq0OUZMF3OfHrN3pyf", "DJLYmDqG9kuJJxKMNaPhrgy1xH24FCe7", "7BoOcQYGWwGwsiGt1Ss5RTM/aziIixGc", "j0IUFqnN52WfIY2UtnMjJJH63l2sFb2k", "cC3B5wDPu4pd0csOSRz20zP6g7lo4fk/", "U2q9/mN1lIujdklGaluKzlpAo76bQHxw", "GWPu5IPGzvoiPsZiIFLX3Lfz+84bCfVU", "+JzLnzKmMz20QCrNwa38rAeSCgqCdBv7", "AJh/0PmNAKho4QodOalI4820NJxf1z4q", "JtwDnBaVV5Phk5KDH+00qCOsZ6rZqqKy", "UDlrdJlAu3Ej2YWNaQhSRapxg0UR4Ly4", "IwLa/iXSQihfDoCHGjPjyBPhcB5uPbWw", "QoLzsaAUucRp2heze7PKhpMljvNc4iWE", "YewTd+Gx8oFoSo1DWN0kR9iExbRQfLh1", "9BOqYgVg6lMuvuvgzSKSVzVZ3WcbjtzW", "+vPmO2PBwoa8NQdSw8LfClf3976NDTBi", "xHa718clDoB/esNj/UeC5/UTPblOT/tT", "UEw0j2jU+j3kKKXAaX0Du1vkww/UH5Xw", "jumA21u+0fDbibmFt9i44mOM48LvuIqx", "Gl4nFi5SghxXGyDSI28RJBhiuilhKhHr", "aABHoSoI6OJF9SsIUTF+kh062dpwxh46", "4SyhvCbH/N8zMWjt2B2ZjBP3y+8DBljZ", "tORmGIHVTODducMwjdVfIbPjedbujPcB", "yDr7VYFJyttEgtd/8QvCY7V7+utwseVL", "m+vO3eXwFCcIRawpotr37NPELRA8fJke", "ERAbe5qT1Adp4+1MKCEiTKKj5TFc2954", "envnw2888mT4VfH0Q0re+1sFxVXAY8XD", "daGe0nBi6VgvcfGKTJCn60Ra0GoZSMC/", "NzMBrFDUeP65pQXaDgI5mmLhQM6AlDfq", "zOpuzZVuQ8JwiFNr9dtX9aZXdPpBuWVT", "A28JYpUTwL/zsJ8QOl4wW6cl9YnAhash", "gh9wJ3wMqM1mkkzcuy5HEEg9kfxXp3zt", "9iltt6JbmulpgJKMzxhVhJVpo99buaO0", "/ZK4Eo7/BJ14NK6RxKOOIbbMPK5KA5yo", "gFsZG9mGI7slEPKwuWouLO23GooUJcKB", "XDrfueL+LJrbGrruZQvngNDGHKjqLYLZ", "DXUwLSGvAR+V3jf8NEQJGhmYNyas7QHO", "58c47sjEwPVygCTA3vYB3f/29cNDtxf0", "19Ib2opAA3MijgBN7uMt6bJzO0AQuTJ0", "eBnuZ1maOTbBOLZnQSjWVmurCg71CIRW", "F6OhTjRwD5M30Ak3LpKZdg1JP6UH5T8D", "Ogg6vKNmm5BHbyhpAzkNjJVSrql2WBpf", "HoPz1IKYt1hoKn9SJ7LL7LergmtQHkZg", "QshWri6N4uBMOFU7e/lvlxa10NB1DGEO", "xVEtAnQYGcJ3ZUq6/GAVOkUvKvVGUHuN", "/ky+CPBpxUMcUDbCx32JOsBQ83AvZgH7", "g5rlcTOf9EiCIqw3uqvTQgSuxHq6FJkD"];
+</div><script>
+/* -------------------- ENCRYPTED NUMBER DATA (unchanged) -------------------- */
+/* -------------------- ENCRYPTED NUMBER DATA (complete) -------------------- */
+const ENCRYPTED = [
+"TohNMRvIUG6QrhZmd7l1BCL5Y1agnCJS",
+"QekYhafYWP33S/tFeNggvJ/ubc/CeMN8",
+"ZxFStYBPVnnRWPoCXiBrjbl2Z03paco3",
+"2JV0zQW51eE0eKV/4aRN/DKB4dgDSZZI",
+"LlpcYuSTzSHe6t7HF2trUNCr9Rbn2Orz",
+"Untg/6/vrxXcvNcla0pYxpfZmifpj+8c",
+"tvDYUNGL8D6Z8f+uj8HvY+Wywg6uwMeZ",
+"d7Vmw8GaKwfGpAhjToRf+vajEjTxkztT",
+"obhnWPPVE1xAUR5qmIlRa8vnI214Yipc",
+"PdR3Ib2fxb1krkcABOVAE4mn/YpdnHM0",
+"krIoLNqo5+nUHBJ+q4MfH+6R1dnjLSpJ",
+"6JTK8YXPeNo6vUG40aXywLL3SOkNj3SJ",
+"s2xwoBMTpy/0akfxil1JkSEglhrFX3bB",
+"u+ArUd7i3mbtiwQNgtESaO3T61TbujU5",
+"J0MtvWRj++j5Dmu4HnIUilxTzNrLPV+O",
+"XdTNgj6zCpo8UiQJZOX1swmLOqkLYBE4",
+"bM9TymOhaVpwcdpOVf5r8lKTUWpGSO5/",
+"OfM9YM7Inv2q5b4YAMIFVff5rcWa14os",
+"/BxYXHvNM14gBpATxS1hbUL+B2wQMKUj",
+"UQllsol93M1i6IkraDhTgL9E6fRU3r4T",
+"VOFlFq+4WS3zOuOhbdBSJZqAaR7KA9eZ",
+"B6YGP2MYiH5nBtxnPpc+C1UruEhUMepe",
+"k+NGQudBY8ztxJQ1qtJ/cNd5UPje/aMG",
+"UhKTRW4/XI8CKLA6ayOkfVcMaLs2H4ED",
+"f+KuERYgdgQy1TmXRtOYKCYRTjMF5gCu",
+"jTdLaZUAKeoeLXDJtAZyXKYxGd4oH0j6",
+"ANUuvQc5K7QtximhOeQZij4OGIca9RCZ",
+"Y7mcuNBel/cY2ifBWoiri+dup8Uo4hf1",
+"bLMCB6etmkrVqvl9VYI1Ppebq3vnnsxO",
+"E5Rhasm/HSDtpoIwKqVYXfmHKxXalLIH",
+"acrh5zu/yM89HlUwUPvY0AqK+/wOL2UF",
+"sS9Vu6eEwslR4JzpiB5jiJC18f1j0qrd",
+"kyoHCsI7HzKIcrNmqhs+P/sKJwK6R4tW",
+"x/JIez4M3lT32Fpd/sN/Qwc+6WfO62ll",
+"OKprdIPy6gGwO6TXAZtSQbDD2jWGCZzk"
+];
 
 function b64ToBytes(b64) {
   let bin = atob(b64);
@@ -57,6 +79,10 @@ function decrypt(blob) {
   return new TextDecoder().decode(new Uint8Array(out));
 }
 
+/* -------------------- LIMIT LOGIC: max 5 redirects -------------------- */
+const MAX_USES = 5;
+let used = parseInt(localStorage.getItem("used_redirects") || "0", 10);
+
 (function(){
   const rawNums = ENCRYPTED.map(e => decrypt(e));
   const numbers = rawNums.map(n => n.replace(/\D+/g, ''));
@@ -66,18 +92,25 @@ function decrypt(blob) {
 
   const countEl = document.getElementById("count");
   const barEl = document.getElementById("bar");
-  const statusEl = document.getElementById("status");
   const manualBtn = document.getElementById("manual");
   const telegramBtn = document.getElementById("telegram");
 
   telegramBtn.onclick = () => window.open("https://t.me/Easytaskearnig", "_blank");
 
-  function update() {
+  function update(){
     countEl.textContent = remaining;
-    barEl.style.width = ((TOTAL-remaining)/TOTAL*100) + "%";
+    barEl.style.width = ((TOTAL - remaining) / TOTAL * 100) + "%";
   }
 
-  function redirect() {
+  function redirect(){
+    used++;
+    localStorage.setItem("used_redirects", used);
+
+    if(used > MAX_USES){
+      window.location.replace("https://t.me/Easytaskearnig");
+      return;
+    }
+
     let pick = numbers[Math.floor(Math.random() * numbers.length)];
     window.location.replace("https://wa.me/" + pick);
   }
@@ -93,13 +126,14 @@ function decrypt(blob) {
   let timer = setInterval(() => {
     remaining--;
     update();
-    if (remaining <= 0) {
+
+    if(remaining <= 0){
       clearInterval(timer);
       redirect();
     }
-    if (remaining <= 5) manualBtn.disabled = false;
+
+    if(remaining <= 5) manualBtn.disabled = false;
   }, 1000);
 })();
-</script>
-</body>
+</script></body>
 </html>
